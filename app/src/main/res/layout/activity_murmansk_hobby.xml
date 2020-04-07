@@ -49,6 +49,19 @@
                 android:layout_height="wrap_content"
                 android:onClick="technical"
                 android:text="Технические" />
+
+            <Button
+                android:id="@+id/button30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="hobby_choreography"
+                android:text="Хореография" />
+
+            <Button
+                android:id="@+id/button27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Музыкальные/вокальные" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

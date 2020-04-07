@@ -10,7 +10,9 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".murmansk.hobby.MurmanskHobbyDecorativeAppliedActivity"></activity>
+        <activity android:name=".murmansk.hobby.MurmanskHobbyChoreographyActivity"></activity>
+        <activity android:name=".murmansk.hobby.MurmanskHobbyTechActivity" />
+        <activity android:name=".murmansk.hobby.MurmanskHobbyDecorativeAppliedActivity" />
         <activity android:name=".murmansk.hobby.MurmanskHobbyTutorsActivity" />
         <activity android:name=".murmansk.hobby.MurmanskHobbyDevelopmentCentreActivity" />
         <activity android:name=".murmansk.hobby.MurmanskHobbyCiprActivity" />
@@ -30,7 +32,7 @@
         <activity android:name=".murmansk.relaxtion.MurmanskZooActivity" />
         <activity android:name=".murmansk.relaxtion.MurmanskKidsOrganizationActivity" />
         <activity android:name=".murmansk.relaxtion.MurmanskIntellectGameActivity" />
-        <activity android:name=".murmansk.relaxtion.MurmanskAntiKafeActivity" />
+        <activity android:name=".murmansk.relaxtion.MurmanskAntiCafeActivity" />
         <activity android:name=".murmansk.relaxtion.MurmanskSportActivity" />
         <activity android:name=".murmansk.relaxtion.MurmanskQuestActivity" />
         <activity android:name=".murmansk.MurmanskRelaxionActivity" />

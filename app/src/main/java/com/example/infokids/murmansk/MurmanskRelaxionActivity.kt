@@ -31,7 +31,7 @@ class MurmanskRelaxionActivity : AppCompatActivity() {
     }
 
     fun antiKafe(view: View) {
-        val antiKafeIntent = Intent(this,MurmanskAntiKafeActivity::class.java)
+        val antiKafeIntent = Intent(this,MurmanskAntiCafeActivity::class.java)
         startActivity(antiKafeIntent)
     }
     fun intellectGame(view: View) {

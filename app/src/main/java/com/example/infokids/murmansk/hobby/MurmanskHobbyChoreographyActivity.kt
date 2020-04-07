@@ -1,13 +1,13 @@
-package com.example.infokids.murmansk.relaxtion
+package com.example.infokids.murmansk.hobby
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.infokids.R
 
-class MurmanskAntiKafeActivity : AppCompatActivity() {
+class MurmanskHobbyChoreographyActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_murmansk_anti_kafe)
+        setContentView(R.layout.activity_murmansk_hobby_choreography)
     }
 }

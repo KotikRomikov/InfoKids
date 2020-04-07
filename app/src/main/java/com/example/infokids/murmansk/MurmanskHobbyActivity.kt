@@ -5,10 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.infokids.R
-import com.example.infokids.murmansk.hobby.MurmanskHobbyCiprActivity
-import com.example.infokids.murmansk.hobby.MurmanskHobbyDecorativeAppliedActivity
-import com.example.infokids.murmansk.hobby.MurmanskHobbyDevelopmentCentreActivity
-import com.example.infokids.murmansk.hobby.MurmanskHobbyTutorsActivity
+import com.example.infokids.murmansk.hobby.*
 
 class MurmanskHobbyActivity : AppCompatActivity() {
 
@@ -37,5 +34,13 @@ class MurmanskHobbyActivity : AppCompatActivity() {
         startActivity(decorativeAppliedIntent)
     }
 
-    fun technical(view: View) {}
+    fun technical(view: View) {
+        val technicalIntent = Intent(this,MurmanskHobbyTechActivity::class.java)
+        startActivity(technicalIntent)
+    }
+
+    fun hobby_choreography(view: View) {
+        val choreographyIntent = Intent(this,MurmanskHobbyChoreographyActivity::class.java)
+        startActivity(choreographyIntent)
+    }
 }
