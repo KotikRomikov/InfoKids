@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".murmansk.MurmanskHobbyActivity">
+    tools:context=".murmansk.hobby.MurmanskHobbyCiprActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,26 +15,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <Button
-                android:id="@+id/button16"
+            <TextView
+                android:id="@+id/textView25"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="murmansk_hobby_cipr"
-                android:text="ципр" />
-
-            <Button
-                android:id="@+id/button17"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="murmansk_hobby_development_centre"
-                android:text="Центры развития" />
-
-            <Button
-                android:id="@+id/button26"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="murmansk_hobby_tutors"
-                android:text="Репетиторы" />
+                android:autoLink="web|phone"
+                android:gravity="center"
+                android:text="@string/murmansk_hobby_cipr"
+                android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
