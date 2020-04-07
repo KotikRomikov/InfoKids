@@ -10,7 +10,8 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".murmansk.hobby.MurmanskHobbyTutorsActivity"></activity>
+        <activity android:name=".murmansk.hobby.MurmanskHobbyDecorativeAppliedActivity"></activity>
+        <activity android:name=".murmansk.hobby.MurmanskHobbyTutorsActivity" />
         <activity android:name=".murmansk.hobby.MurmanskHobbyDevelopmentCentreActivity" />
         <activity android:name=".murmansk.hobby.MurmanskHobbyCiprActivity" />
         <activity android:name=".murmansk.shop.MurmanskShopHandMadeActivity" />

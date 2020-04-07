@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.example.infokids.R
 import com.example.infokids.murmansk.hobby.MurmanskHobbyCiprActivity
+import com.example.infokids.murmansk.hobby.MurmanskHobbyDecorativeAppliedActivity
 import com.example.infokids.murmansk.hobby.MurmanskHobbyDevelopmentCentreActivity
 import com.example.infokids.murmansk.hobby.MurmanskHobbyTutorsActivity
 
@@ -30,4 +31,11 @@ class MurmanskHobbyActivity : AppCompatActivity() {
         val tutorsIntent = Intent(this,MurmanskHobbyTutorsActivity::class.java)
         startActivity(tutorsIntent)
     }
+
+    fun DecorativeApplied(view: View) {
+        val decorativeAppliedIntent = Intent(this,MurmanskHobbyDecorativeAppliedActivity::class.java)
+        startActivity(decorativeAppliedIntent)
+    }
+
+    fun technical(view: View) {}
 }

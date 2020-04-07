@@ -35,6 +35,20 @@
                 android:layout_height="wrap_content"
                 android:onClick="murmansk_hobby_tutors"
                 android:text="Репетиторы" />
+
+            <Button
+                android:id="@+id/button28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="DecorativeApplied"
+                android:text="Декоративно-прикладное" />
+
+            <Button
+                android:id="@+id/button29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="technical"
+                android:text="Технические" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
