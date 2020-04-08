@@ -43,4 +43,28 @@ class MurmanskHobbyActivity : AppCompatActivity() {
         val choreographyIntent = Intent(this,MurmanskHobbyChoreographyActivity::class.java)
         startActivity(choreographyIntent)
     }
+
+    fun MusicVocal(view: View) {
+        val musicVocalIntent = Intent(this,MurmanskHobbyMusicVocalActivity::class.java)
+        startActivity(musicVocalIntent)
+    }
+
+    fun Languages(view: View) {
+        val languageIntent = Intent(this,MurmanskHobbyLanguagesActivity::class.java)
+        startActivity(languageIntent)
+    }
+
+    fun artwork(view: View) {
+        val artWorkIntent = Intent(this,MurmanskHobbyArtWorkActivity::class.java)
+        startActivity(artWorkIntent)
+    }
+
+    fun centerOfDevelopment(view: View) {
+        val centerOfDevelopmentIntent = Intent(this,MurmanskHobbyCenterOfDevelopmentActivity::class.java)
+        startActivity(centerOfDevelopmentIntent)
+    }
+    fun SportsSection(view: View) {
+        val sportsSectionIntent = Intent(this,MurmanskHobbySportsSectionActivity::class.java)
+        startActivity(sportsSectionIntent)
+    }
 }

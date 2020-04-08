@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".murmansk.MurmanskFotoVideoActivity">
+    tools:context=".murmansk.celebration.MurmanskCelebrationAnimatorActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,12 +16,12 @@
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/textView40"
+                android:id="@+id/textView38"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autoLink="web|phone"
                 android:gravity="center"
-                android:text="@string/murmansk_foto_video"
+                android:text="@string/murmansk_celebration_animator"
                 android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>

@@ -21,10 +21,6 @@ class MurmanskSectionActivity : AppCompatActivity() {
         val otherIntent = Intent(this,MurmanskOtherActivity::class.java)
         startActivity(otherIntent)
     }
-    fun barberSection(view: View) {
-        val barberIntent = Intent(this,MurmanskBarberActivity::class.java)
-        startActivity(barberIntent)
-    }
     fun FotoVideoSection(view: View) {
         val fotoVideoIntent = Intent(this,MurmanskFotoVideoActivity::class.java)
         startActivity(fotoVideoIntent)
