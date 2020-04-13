@@ -12,7 +12,6 @@ class OlenegorskSectionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_olenegorsk_section)
     }
 
-    fun MedicalRazdel(view: View) {}
     fun OtherSection(view: View) {}
     fun barberSection(view: View) {}
     fun FotoVideoSection(view: View) {}

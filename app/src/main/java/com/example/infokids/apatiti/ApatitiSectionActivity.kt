@@ -12,7 +12,6 @@ class ApatitiSectionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_apatiti_section)
     }
 
-    fun MedicalRazdel(view: View) {}
     fun MedicalSection(view: View) {}
     fun RelaxationSection(view: View) {}
     fun ShopSection(view: View) {}

@@ -12,7 +12,6 @@ class KandalakshaSectionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_kandalaksha_section)
     }
 
-    fun MedicalRazdel(view: View) {}
     fun OtherSection(view: View) {}
     fun barberSection(view: View) {}
     fun FotoVideoSection(view: View) {}
