@@ -15,39 +15,39 @@ class MurmanskMedicalActivity : AppCompatActivity() {
     }
 
     fun pediatorMurmansk(view: View) {
-        val pediatorMurmanskIntent = Intent(this,PediatorMurmanskActivity::class.java)
+        val pediatorMurmanskIntent = Intent(this,MurmanskPediatorActivity::class.java)
         startActivity(pediatorMurmanskIntent)
     }
     fun nevrologMurmansk(view: View) {
-        val nevrologMurmanskIntent = Intent(this, NevrologMurmanskActivity::class.java)
+        val nevrologMurmanskIntent = Intent(this, MurmanskNevrologActivity::class.java)
         startActivity(nevrologMurmanskIntent)
     }
     fun massagMurmansk(view: View) {
-        val massagMurmanskIntent = Intent(this,MassagMurmanskActivity::class.java)
+        val massagMurmanskIntent = Intent(this,MurmanskMassagActivity::class.java)
         startActivity(massagMurmanskIntent)
     }
     fun logopediMurmansk(view: View) {
-        val logopedMurmanskIntent = Intent(this,LogopedMurmanskActivity::class.java)
+        val logopedMurmanskIntent = Intent(this,MurmanskLogopedActivity::class.java)
         startActivity(logopedMurmanskIntent)
     }
     fun psihologiMurmansk(view: View) {
-        val psihologiMurmanskIntent = Intent(this,PsihologiMurmanskActivity::class.java)
+        val psihologiMurmanskIntent = Intent(this,MurmanskPsihologiActivity::class.java)
         startActivity(psihologiMurmanskIntent)
     }
     fun grudnMurmansk(view: View) {
-        val grudnMurmanskIntent = Intent(this,GrudnMurmanskActivity::class.java)
+        val grudnMurmanskIntent = Intent(this,MurmanskGrudnActivity::class.java)
         startActivity(grudnMurmanskIntent)
     }
     fun hospitalMurmansk(view: View) {
-        val hospitalMurmanskIntent = Intent(this,HospitalMurmanskActivity::class.java)
+        val hospitalMurmanskIntent = Intent(this,MurmanskHospitalActivity::class.java)
         startActivity(hospitalMurmanskIntent)
     }
     fun rodiHouseMurmansk(view: View) {
-        val rodiMurmanskIntent = Intent(this,RodiMurmanskActivity::class.java)
+        val rodiMurmanskIntent = Intent(this,MurmanskRodiActivity::class.java)
         startActivity(rodiMurmanskIntent)
     }
     fun privateHospitalMurmansk(view: View) {
-        val privateHospitalMurmanskIntent = Intent(this,PrivateHospitalMurmanskActivity::class.java)
+        val privateHospitalMurmanskIntent = Intent(this,MurmanskPrivateHospitalActivity::class.java)
         startActivity(privateHospitalMurmanskIntent)
     }
 }

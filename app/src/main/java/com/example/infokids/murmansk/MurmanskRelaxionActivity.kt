@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.infokids.R
-import com.example.infokids.murmansk.relaxtion.*
-import com.example.infokids.murmansk.relaxtion.MurmanskOtherRelaxionActivity
+import com.example.infokids.murmansk.relaxation.*
+import com.example.infokids.murmansk.relaxation.MurmanskOtherRelaxationActivity
 
 class MurmanskRelaxionActivity : AppCompatActivity() {
 
@@ -51,7 +51,7 @@ class MurmanskRelaxionActivity : AppCompatActivity() {
         startActivity(cultureIntent)
     }
     fun other(view: View) {
-        val otherIntent = Intent(this,MurmanskOtherRelaxionActivity::class.java)
+        val otherIntent = Intent(this,MurmanskOtherRelaxationActivity::class.java)
         startActivity(otherIntent)
     }
 }
