@@ -10,7 +10,16 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".severomorsk.hobby.SeveromorskHobbyLanguagesActivity"></activity>
+        <activity android:name=".severomorsk.SeveromorskOtherActivity"></activity>
+        <activity android:name=".severomorsk.other.SeveromorskOtherNanniesPrivateKindergartensActivity" />
+        <activity android:name=".severomorsk.other.SeveromorskOtherHireActivity" />
+        <activity android:name=".severomorsk.SeveromorskFotoVideoActivity" />
+        <activity android:name=".severomorsk.celebration.SeveromorskCelebrationOtherActivity" />
+        <activity android:name=".severomorsk.celebration.SeveromorskCelebrationCakesActivity" />
+        <activity android:name=".severomorsk.celebration.SeveromorskCelebrationBallsActivity" />
+        <activity android:name=".severomorsk.celebration.SeveromorskCelebrationAnimatorActivity" />
+        <activity android:name=".severomorsk.SeveromorskCelebrationActivity" />
+        <activity android:name=".severomorsk.hobby.SeveromorskHobbyLanguagesActivity" />
         <activity android:name=".severomorsk.hobby.SeveromorskHobbyChoreographyActivity" />
         <activity android:name=".severomorsk.hobby.SeveromorskHobbyTechnicalActivity" />
         <activity android:name=".severomorsk.hobby.SeveromorskHobbySportSectionActivity" />

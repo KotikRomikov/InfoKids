@@ -13,10 +13,18 @@ class SeveromorskSectionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_severomorsk_section)
     }
 
-    fun OtherSection(view: View) {}
-    fun barberSection(view: View) {}
-    fun FotoVideoSection(view: View) {}
-    fun CelebrationSection(view: View) {}
+    fun OtherSection(view: View) {
+        val otherIntent = Intent(this,SeveromorskOtherActivity::class.java)
+        startActivity(otherIntent)
+    }
+        fun FotoVideoSection(view: View) {
+        val fotoVideoIntent = Intent(this,SeveromorskFotoVideoActivity::class.java)
+        startActivity(fotoVideoIntent)
+    }
+    fun CelebrationSection(view: View) {
+        val celebrationIntent = Intent(this,SeveromorskCelebrationActivity::class.java)
+        startActivity(celebrationIntent)
+    }
     fun HobbySection(view: View) {
         val severomorskHobbyIntent = Intent(this,SeveromorskHobbyActivity::class.java)
         startActivity(severomorskHobbyIntent)
