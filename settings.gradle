@@ -1,0 +1,2 @@
+rootProject.name='InfoKids'
+include ':app'
