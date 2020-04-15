@@ -132,6 +132,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".MenuActivity" />
+        <activity android:name=".apatiti.ApatitiCelebrationActivity" />
+        <activity android:name=".apatiti.celebration.ApatitiCelebrationCakesActivity" />
+        <activity android:name=".apatiti.celebration.ApatitiCelebrationBallsActivity" />
+        <activity android:name=".apatiti.celebration.ApatitiCelebrationAnimatorActivity" />
+        <activity android:name=".apatiti.celebration.ApatitiCelebrationOtherActivity" />
     </application>
 
 </manifest>
