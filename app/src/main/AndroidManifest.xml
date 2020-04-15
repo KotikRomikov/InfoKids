@@ -10,7 +10,12 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".olenegorsk.OlenegorskFotoVideoActivity"></activity>
+        <activity android:name=".monchegorsk.medical.MonchegorskMedicalPsihologiActivity"></activity>
+        <activity android:name=".monchegorsk.medical.MonchegorskMedicalLogopedActivity" />
+        <activity android:name=".monchegorsk.medical.MonchegorskMedicalMassageActivity" />
+        <activity android:name=".monchegorsk.medical.MonchegorskMedicalHospitalActivity" />
+        <activity android:name=".monchegorsk.MonchegorskMedicalActivity" />
+        <activity android:name=".olenegorsk.OlenegorskFotoVideoActivity" />
         <activity android:name=".olenegorsk.celebration.OlenegorskCelebrationOtherActivity" />
         <activity android:name=".olenegorsk.celebration.OlenegorskCelebrationBallsActivity" />
         <activity android:name=".olenegorsk.celebration.OlenegorskCelebrationCakesActivity" />
