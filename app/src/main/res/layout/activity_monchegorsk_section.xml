@@ -60,13 +60,6 @@
             android:text="Фотографы/видеооператоры" />
 
         <Button
-            android:id="@+id/barberBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="barberSection"
-            android:text="Парикмахерские" />
-
-        <Button
             android:id="@+id/OtherBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

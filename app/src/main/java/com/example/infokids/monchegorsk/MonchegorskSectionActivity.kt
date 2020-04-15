@@ -13,11 +13,22 @@ class MonchegorskSectionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_monchegorsk_section)
     }
 
-    fun OtherSection(view: View) {}
-    fun barberSection(view: View) {}
-    fun FotoVideoSection(view: View) {}
-    fun CelebrationSection(view: View) {}
-    fun HobbySection(view: View) {}
+    fun OtherSection(view: View) {
+        val otherIntent = Intent(this,MonchegorskOtherActivity::class.java)
+        startActivity(otherIntent)
+    }
+    fun FotoVideoSection(view: View) {
+        val FotoVideoSectionIntent = Intent(this,MonchegorskFotoVideoActivity::class.java)
+        startActivity(FotoVideoSectionIntent)
+    }
+    fun CelebrationSection(view: View) {
+        val CelebrationSectionIntent = Intent(this,MonchegorskCelebrationActivity::class.java)
+        startActivity(CelebrationSectionIntent)
+    }
+    fun HobbySection(view: View) {
+        val hobbyIntent = Intent(this,MonchegorskHobbyActivity::class.java)
+        startActivity(hobbyIntent)
+    }
     fun RelaxationSection(view: View) {
         val relaxationIntent = Intent(this,MonchegorskRelaxationActivity::class.java)
         startActivity(relaxationIntent)
