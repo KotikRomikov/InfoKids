@@ -178,6 +178,13 @@
         <activity android:name=".apatiti.celebration.ApatitiCelebrationBallsActivity" />
         <activity android:name=".apatiti.celebration.ApatitiCelebrationAnimatorActivity" />
         <activity android:name=".apatiti.celebration.ApatitiCelebrationOtherActivity" />
+        <activity android:name=".apatiti.hobby.ApatitiHobbyCiprActivity" />
+        <activity android:name=".apatiti.ApatitiHobbyActivity" />
+        <activity android:name=".apatiti.hobby.ApatitiHobbyDevelopmentCentreActivity" />
+        <activity android:name=".apatiti.hobby.ApatitiHobbyTutorsActivity" />
+        <activity android:name=".apatiti.hobby.ApatitiHobbySportsSectionActivity" />
+        <activity android:name=".apatiti.hobby.ApatitiHobbyDecorativeAppliedActivity" />
+        <activity android:name=".apatiti.hobby.ApatitiHobbyTechActivity" />
     </application>
 
 </manifest>
