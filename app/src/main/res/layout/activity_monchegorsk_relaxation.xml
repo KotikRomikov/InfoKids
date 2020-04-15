@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".monchegorsk.MonchegorskRelaxationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/button86"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="sport_relaxion"
+                android:text="Спортивно-развлекательные" />
+
+            <Button
+                android:id="@+id/button87"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="game_place"
+                android:text="игровые центры/комнаты семейного отдыха" />
+
+            <Button
+                android:id="@+id/button88"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="relaxation_cafe"
+                android:text="Кафе с/рядом игровыми комнатами" />
+
+            <Button
+                android:id="@+id/button89"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="other"
+                android:text="Прочее" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
