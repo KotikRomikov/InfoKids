@@ -22,7 +22,10 @@ class ApatitiSectionActivity : AppCompatActivity() {
     fun MedicalSection(view: View) {}
     fun RelaxationSection(view: View) {}
     fun ShopSection(view: View) {}
-    fun HobbySection(view: View) {}
+    fun HobbySection(view: View) {
+        val HobbySectionIntent = Intent(this,ApatitiHobbyActivity::class.java)
+        startActivity(HobbySectionIntent)
+    }
     fun FotoVideoSection(view: View) {}
     fun barberSection(view: View) {}
     fun OtherSection(view: View) {}
