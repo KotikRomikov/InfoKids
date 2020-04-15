@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".olenegorsk.OlenegorskShopActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/button70"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="product_for_kids"
+                android:text="товары для детей" />
+
+            <Button
+                android:id="@+id/button71"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clothes"
+                android:text="одежда/текстиль" />
+
+            <Button
+                android:id="@+id/button72"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="toys"
+                android:text="игрушки" />
+
+            <Button
+                android:id="@+id/button73"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="hand_made"
+                android:text="ручная работа" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
