@@ -10,7 +10,12 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".monchegorsk.relaxation.MonchegorskRelaxationOtherActivity"></activity>
+        <activity android:name=".monchegorsk.shop.MonchegorskShopProductForKidsActivity"></activity>
+        <activity android:name=".monchegorsk.shop.MonchegorskShopClothesActivity" />
+        <activity android:name=".monchegorsk.shop.MonchegorskShopHandMadeActivity" />
+        <activity android:name=".monchegorsk.shop.MonchegorskShopShoesActivity" />
+        <activity android:name=".monchegorsk.MonchegorskShopActivity" />
+        <activity android:name=".monchegorsk.relaxation.MonchegorskRelaxationOtherActivity" />
         <activity android:name=".monchegorsk.relaxation.MonchegorskRelaxationCafeActivity" />
         <activity android:name=".monchegorsk.relaxation.MonchegorskRelaxationGamePlaceActivity" />
         <activity android:name=".monchegorsk.relaxation.MonchegorskRelaxationSportActivity" />

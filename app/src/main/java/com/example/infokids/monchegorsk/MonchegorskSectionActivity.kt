@@ -26,5 +26,8 @@ class MonchegorskSectionActivity : AppCompatActivity() {
         val medicalIntent = Intent(this,MonchegorskMedicalActivity::class.java)
         startActivity(medicalIntent)
     }
-    fun ShopSection(view: View) {}
+    fun ShopSection(view: View) {
+        val shopIntent = Intent(this,MonchegorskShopActivity::class.java)
+        startActivity(shopIntent)
+    }
 }
