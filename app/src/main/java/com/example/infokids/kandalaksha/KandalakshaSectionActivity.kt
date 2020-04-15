@@ -18,7 +18,10 @@ class KandalakshaSectionActivity : AppCompatActivity() {
     fun FotoVideoSection(view: View) {}
     fun CelebrationSection(view: View) {}
     fun HobbySection(view: View) {}
-    fun ShopSection(view: View) {}
+    fun ShopSection(view: View) {
+        val shopIntent = Intent(this,KandalakshaShopActivity::class.java)
+        startActivity(shopIntent)
+    }
     fun RelaxationSection(view: View) {
         val RelaxationSectionIntent = Intent(this,KandalakshaRelaxationActivity::class.java)
         startActivity(RelaxationSectionIntent)

@@ -10,7 +10,12 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".kandalaksha.relaxation.KandalakshaRelaxationOtherActivity"></activity>
+        <activity android:name=".kandalaksha.shop.KandalakshaShopHandMadeActivity"></activity>
+        <activity android:name=".kandalaksha.shop.KandalakshaShopToysActivity" />
+        <activity android:name=".kandalaksha.shop.KandalakshaShopClothesActivity" />
+        <activity android:name=".kandalaksha.shop.KandalakshaShopProductForKidsActivity" />
+        <activity android:name=".kandalaksha.KandalakshaShopActivity" />
+        <activity android:name=".kandalaksha.relaxation.KandalakshaRelaxationOtherActivity" />
         <activity android:name=".kandalaksha.relaxation.KandalakshaRelaxationGamePlaceActivity" />
         <activity android:name=".kandalaksha.relaxation.KandalakshaRelaxationKidsOrganizationActivity" />
         <activity android:name=".kandalaksha.relaxation.KandalakshaRelaxationCafeActivity" />
