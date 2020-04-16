@@ -27,7 +27,10 @@ class ApatitiSectionActivity : AppCompatActivity() {
         val relaxationIntent = Intent(this,ApatitiRelaxationActivity::class.java)
         startActivity(relaxationIntent)
     }
-    fun ShopSection(view: View) {}
+    fun ShopSection(view: View) {
+        val shopIntent = Intent(this,ApatitiShopActivity::class.java)
+        startActivity(shopIntent)
+    }
     fun HobbySection(view: View) {
         val HobbySectionIntent = Intent(this,ApatitiHobbyActivity::class.java)
         startActivity(HobbySectionIntent)

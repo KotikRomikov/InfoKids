@@ -10,7 +10,13 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".apatiti.relaxation.ApatitiRelaxationKidsOrganizationActivity"></activity>
+        <activity android:name=".apatiti.shop.ApatitiShopHandMadeActivity"></activity>
+        <activity android:name=".apatiti.shop.ApatitiShopToysActivity" />
+        <activity android:name=".apatiti.shop.ApatitiShopShoesActivity" />
+        <activity android:name=".apatiti.shop.ApatitiShopClothesActivity" />
+        <activity android:name=".apatiti.shop.ApatitiShopProductForKidsActivity" />
+        <activity android:name=".apatiti.ApatitiShopActivity" />
+        <activity android:name=".apatiti.relaxation.ApatitiRelaxationKidsOrganizationActivity" />
         <activity android:name=".apatiti.relaxation.ApatitiRelaxationCafeActivity" />
         <activity android:name=".apatiti.relaxation.ApatitiRelaxationSportActivity" />
         <activity android:name=".apatiti.relaxation.ApatitiRelaxationGameCentreActivity" />
