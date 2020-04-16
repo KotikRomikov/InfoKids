@@ -10,7 +10,8 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".apatiti.other.ApatitiOtherNanniesActivity"></activity>
+        <activity android:name=".apatiti.ApatitiFotoVideoActivity"></activity>
+        <activity android:name=".apatiti.other.ApatitiOtherNanniesActivity" />
         <activity android:name=".apatiti.other.ApatitiOtherHireActivity" />
         <activity android:name=".apatiti.ApatitiOtherActivity" />
         <activity android:name=".kirovsk.KirovskOtherActivity" />

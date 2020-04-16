@@ -26,7 +26,10 @@ class ApatitiSectionActivity : AppCompatActivity() {
         val HobbySectionIntent = Intent(this,ApatitiHobbyActivity::class.java)
         startActivity(HobbySectionIntent)
     }
-    fun FotoVideoSection(view: View) {}
+    fun FotoVideoSection(view: View) {
+        val fotoVideoIntent = Intent(this,ApatitiFotoVideoActivity::class.java)
+        startActivity(fotoVideoIntent)
+    }
     fun OtherSection(view: View) {
         val otherIntent = Intent(this,ApatitiOtherActivity::class.java)
         startActivity(otherIntent)
