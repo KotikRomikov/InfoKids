@@ -1,5 +1,6 @@
 package com.example.infokids.kirovsk
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -19,5 +20,8 @@ class KirovskSectionActivity : AppCompatActivity() {
     fun HobbySection(view: View) {}
     fun ShopSection(view: View) {}
     fun RelaxationSection(view: View) {}
-    fun MedicalSection(view: View) {}
+    fun MedicalSection(view: View) {
+        val medicalIntent = Intent(this,KirovskMedicalActivity::class.java)
+        startActivity(medicalIntent)
+    }
 }

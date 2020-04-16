@@ -10,7 +10,12 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".zori.ZoriOtherActivity"></activity>
+        <activity android:name=".kirovsk.medical.KirovskMedicalHospitalActivity"></activity>
+        <activity android:name=".kirovsk.medical.KirovskMedicalLogopedActivity" />
+        <activity android:name=".kirovsk.medical.KirovskMedicalMassageActivity" />
+        <activity android:name=".kirovsk.medical.KirovskMedicalDoctorsActivity" />
+        <activity android:name=".kirovsk.KirovskMedicalActivity" />
+        <activity android:name=".zori.ZoriOtherActivity" />
         <activity android:name=".zori.ZoriFotoVideoActivity" />
         <activity android:name=".zori.celebration.ZoriCelebrationOtherActivity" />
         <activity android:name=".zori.celebration.ZoriCelebrationAnimatorActivity" />

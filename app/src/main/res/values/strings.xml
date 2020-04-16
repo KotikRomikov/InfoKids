@@ -2897,5 +2897,37 @@
         ✔Прокат игрушек TryToy - Апатиты Кировск\n
         https://vk.com/prokat_trytoy\n\n
         ✔GOODDress\n
-        https://vk.com/club177143024\n\n</string>
+        https://vk.com/club177143024\n</string>
+    <string name="kirovsk_medical_doctors">
+        Педиатр:\n\n
+        ✔Федоринов Виталий Владимирович\n
+        +79113419070\n
+        (также приезжает в Апатиты)\n\n
+        Невролог:\n\n
+        ✔Еникеев Алексей Владимирович\n
+        +79212755400\n\n</string>
+    <string name="kirovsk_medical_massage">
+        ✔Мария Белова\n
+        https://vk.com/mar_bel\n\n
+        ✔Алена\n
+        +79643071233\n\n
+        ✔Татьяна Монахова Прокопьевна\n
+        +79211678259\n\n
+        ✔Massaj Detskiy\n
+        https://vk.com/id571660897\n
+        тел.: +7(952)297-54-55\n\n</string>
+    <string name="kirovsk_medical_logoped">
+        ✔Логопед, г.Кировск, Мурманская область\n
+        https://vk.com/club133460723\n
+        Контактный телефон: +7(963)3603647 (Елена)\n\n</string>
+    <string name="kirovsk_medical_hospital">
+        ✔Министерство здравоохранения Мурманской области\n
+        https://vk.com/minzdrav_51\n\n
+        Полармед - Портал здравоохранения Мурманской области\n
+        https://reg.polarmed.ru\n\n
+        ГОБУЗ \"Апатитско-Кировская ЦГБ\"\n
+        (Кировская детская поликлиника)\n
+        пр. Ленина, 28 А, корп. 2\n
+        тел: +7(81531)-59087\n
+        тел: +7(81531)-59109\n\n</string>
 </resources>
