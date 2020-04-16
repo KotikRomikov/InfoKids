@@ -16,22 +16,33 @@
             android:orientation="vertical" >
 
             <Button
+                android:id="@+id/button153"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="productForKids"
+                android:text="товары для детей" />
+
+            <Button
                 android:id="@+id/button151"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:onClick="shoes"
+                android:text="обувь" />
 
             <Button
                 android:id="@+id/button152"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:onClick="handMade"
+                android:text="ручная работа" />
 
             <Button
-                android:id="@+id/button153"
+                android:id="@+id/button154"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:onClick="toys"
+                android:text="игрушки" />
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

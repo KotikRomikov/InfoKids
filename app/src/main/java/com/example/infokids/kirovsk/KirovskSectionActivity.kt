@@ -18,7 +18,10 @@ class KirovskSectionActivity : AppCompatActivity() {
     fun FotoVideoSection(view: View) {}
     fun CelebrationSection(view: View) {}
     fun HobbySection(view: View) {}
-    fun ShopSection(view: View) {}
+    fun ShopSection(view: View) {
+        val shopIntent = Intent(this,KirovskShopActivity::class.java)
+        startActivity(shopIntent)
+    }
     fun RelaxationSection(view: View) {
         val relaxationIntent = Intent(this,KirovskRelaxationActivity::class.java)
         startActivity(relaxationIntent)

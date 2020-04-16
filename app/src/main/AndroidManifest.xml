@@ -10,7 +10,11 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".kirovsk.KirovskShopActivity"></activity>
+        <activity android:name=".kirovsk.shop.KirovskShopToysActivity"></activity>
+        <activity android:name=".kirovsk.shop.KirovskShopHandMadeActivity" />
+        <activity android:name=".kirovsk.shop.KirovskShopShoesActivity" />
+        <activity android:name=".kirovsk.shop.KirovskShopProductForKidsActivity" />
+        <activity android:name=".kirovsk.KirovskShopActivity" />
         <activity android:name=".kirovsk.relaxation.KirovskRelaxationSportActivity" />
         <activity android:name=".kirovsk.relaxation.KirovskRelaxationGamePlaceActivity" />
         <activity android:name=".kirovsk.KirovskRelaxationActivity" />
