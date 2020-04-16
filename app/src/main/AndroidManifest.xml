@@ -10,7 +10,11 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".kirovsk.medical.KirovskMedicalHospitalActivity"></activity>
+        <activity android:name=".kirovsk.KirovskShopActivity"></activity>
+        <activity android:name=".kirovsk.relaxation.KirovskRelaxationSportActivity" />
+        <activity android:name=".kirovsk.relaxation.KirovskRelaxationGamePlaceActivity" />
+        <activity android:name=".kirovsk.KirovskRelaxationActivity" />
+        <activity android:name=".kirovsk.medical.KirovskMedicalHospitalActivity" />
         <activity android:name=".kirovsk.medical.KirovskMedicalLogopedActivity" />
         <activity android:name=".kirovsk.medical.KirovskMedicalMassageActivity" />
         <activity android:name=".kirovsk.medical.KirovskMedicalDoctorsActivity" />

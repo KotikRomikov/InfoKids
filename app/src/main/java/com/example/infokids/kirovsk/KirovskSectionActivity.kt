@@ -19,7 +19,10 @@ class KirovskSectionActivity : AppCompatActivity() {
     fun CelebrationSection(view: View) {}
     fun HobbySection(view: View) {}
     fun ShopSection(view: View) {}
-    fun RelaxationSection(view: View) {}
+    fun RelaxationSection(view: View) {
+        val relaxationIntent = Intent(this,KirovskRelaxationActivity::class.java)
+        startActivity(relaxationIntent)
+    }
     fun MedicalSection(view: View) {
         val medicalIntent = Intent(this,KirovskMedicalActivity::class.java)
         startActivity(medicalIntent)
