@@ -10,7 +10,8 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".kirovsk.KirovskFotoVideoActivity"></activity>
+        <activity android:name=".kirovsk.KirovskOtherActivity"></activity>
+        <activity android:name=".kirovsk.KirovskFotoVideoActivity" />
         <activity android:name=".kirovsk.celebration.KirovskCelebrationOtherActivity" />
         <activity android:name=".kirovsk.celebration.KirovskCelebrationAnimatorActivity" />
         <activity android:name=".kirovsk.celebration.KirovskCelebrationBallsActivity" />

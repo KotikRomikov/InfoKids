@@ -13,8 +13,10 @@ class KirovskSectionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_kirovsk_section)
     }
 
-    fun OtherSection(view: View) {}
-    fun barberSection(view: View) {}
+    fun OtherSection(view: View) {
+        val otherIntent = Intent(this,KirovskOtherActivity::class.java)
+        startActivity(otherIntent)
+    }
     fun FotoVideoSection(view: View) {
         val fotoVideoIntent = Intent(this,KirovskFotoVideoActivity::class.java)
         startActivity(fotoVideoIntent)
