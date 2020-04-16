@@ -13,10 +13,14 @@ class KandalakshaSectionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_kandalaksha_section)
     }
 
-    fun OtherSection(view: View) {}
-    fun barberSection(view: View) {}
-    fun FotoVideoSection(view: View) {}
-    fun CelebrationSection(view: View) {}
+    fun FotoVideoSection(view: View) {
+        val fotoVideoIntent = Intent(this,KandalakshaFotoVideoActivity::class.java)
+        startActivity(fotoVideoIntent)
+    }
+    fun CelebrationSection(view: View) {
+        val celebrationIntent = Intent(this,KandalakshaCelebrationActivity::class.java)
+        startActivity(celebrationIntent)
+    }
     fun HobbySection(view: View) {
         val HobbySectionIntent = Intent(this,KandalakshaHobbyActivity::class.java)
         startActivity(HobbySectionIntent)
