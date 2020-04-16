@@ -10,7 +10,10 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".kirovsk.KirovskOtherActivity"></activity>
+        <activity android:name=".apatiti.other.ApatitiOtherNanniesActivity"></activity>
+        <activity android:name=".apatiti.other.ApatitiOtherHireActivity" />
+        <activity android:name=".apatiti.ApatitiOtherActivity" />
+        <activity android:name=".kirovsk.KirovskOtherActivity" />
         <activity android:name=".kirovsk.KirovskFotoVideoActivity" />
         <activity android:name=".kirovsk.celebration.KirovskCelebrationOtherActivity" />
         <activity android:name=".kirovsk.celebration.KirovskCelebrationAnimatorActivity" />
@@ -225,7 +228,6 @@
         <activity android:name=".murmansk.medical.MurmanskMassagActivity" />
         <activity android:name=".murmansk.medical.MurmanskNevrologActivity" />
         <activity android:name=".murmansk.medical.MurmanskPediatorActivity" />
-        <activity android:name=".NewYearActivity" />
         <activity android:name=".zori.ZoriSectionActivity" />
         <activity android:name=".severomorsk.SeveromorskSectionActivity" />
         <activity android:name=".olenegorsk.OlenegorskSectionActivity" />
