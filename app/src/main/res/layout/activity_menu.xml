@@ -73,11 +73,5 @@
             android:onClick="KandalakshaRazdel"
             android:text="Кандалакша" />
 
-        <Button
-            android:id="@+id/NewYearBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="NewYearRazdel"
-            android:text="Новый год" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

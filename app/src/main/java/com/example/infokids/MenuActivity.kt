@@ -53,9 +53,6 @@ class MenuActivity : AppCompatActivity() {
         val kandalakshaSectionIntent = Intent(this,KandalakshaSectionActivity::class.java)
         startActivity(kandalakshaSectionIntent)
     }
-    fun NewYearRazdel(view: View) {
-        val newYearSectionIntent = Intent(this,NewYearActivity::class.java)
-        startActivity(newYearSectionIntent)
-    }
+
 
 }
