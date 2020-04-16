@@ -10,7 +10,14 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".kirovsk.shop.KirovskShopToysActivity"></activity>
+        <activity android:name=".kirovsk.hobby.KirovskHobbyLanguageActivity"></activity>
+        <activity android:name=".kirovsk.hobby.KirovskHobbyChoreographyActivity" />
+        <activity android:name=".kirovsk.hobby.KirovskHobbyTechnicalActivity" />
+        <activity android:name=".kirovsk.hobby.KirovskHobbySportActivity" />
+        <activity android:name=".kirovsk.hobby.KirovskHobbyDevelompentCentreActivity" />
+        <activity android:name=".kirovsk.hobby.KirovskHobbyCiprActivity" />
+        <activity android:name=".kirovsk.KirovskHobbyActivity" />
+        <activity android:name=".kirovsk.shop.KirovskShopToysActivity" />
         <activity android:name=".kirovsk.shop.KirovskShopHandMadeActivity" />
         <activity android:name=".kirovsk.shop.KirovskShopShoesActivity" />
         <activity android:name=".kirovsk.shop.KirovskShopProductForKidsActivity" />
