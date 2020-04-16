@@ -10,7 +10,14 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".kandalaksha.shop.KandalakshaShopHandMadeActivity"></activity>
+        <activity android:name=".kandalaksha.hobby.KandalakshaHobbyArtWorkActivity"></activity>
+        <activity android:name=".kandalaksha.hobby.KandalakshaHobbyMusicVocalActivity" />
+        <activity android:name=".kandalaksha.hobby.KandalakshaHobbyChoreographyActivity" />
+        <activity android:name=".kandalaksha.hobby.KandalakshaHobbySportActivity" />
+        <activity android:name=".kandalaksha.hobby.KandalakshaHobbyDevelopmentCentreActivity" />
+        <activity android:name=".kandalaksha.hobby.KandalakshaHobbyCiprActivity" />
+        <activity android:name=".kandalaksha.KandalakshaHobbyActivity" />
+        <activity android:name=".kandalaksha.shop.KandalakshaShopHandMadeActivity" />
         <activity android:name=".kandalaksha.shop.KandalakshaShopToysActivity" />
         <activity android:name=".kandalaksha.shop.KandalakshaShopClothesActivity" />
         <activity android:name=".kandalaksha.shop.KandalakshaShopProductForKidsActivity" />
