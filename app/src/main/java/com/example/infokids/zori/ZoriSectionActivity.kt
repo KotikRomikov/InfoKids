@@ -1,5 +1,6 @@
 package com.example.infokids.zori
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -12,12 +13,32 @@ class ZoriSectionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_zori_section)
     }
 
-    fun MedicalSection(view: View) {}
-    fun OtherSection(view: View) {}
-    fun barberSection(view: View) {}
-    fun FotoVideoSection(view: View) {}
-    fun CelebrationSection(view: View) {}
-    fun HobbySection(view: View) {}
-    fun ShopSection(view: View) {}
-    fun RelaxationSection(view: View) {}
+    fun MedicalSection(view: View) {
+        val MedicalSectionIntent = Intent(this,ZoriMedicalActivity::class.java)
+        startActivity(MedicalSectionIntent)
+    }
+    fun OtherSection(view: View) {
+        val otherIntent = Intent(this,ZoriOtherActivity::class.java)
+        startActivity(otherIntent)
+    }
+    fun FotoVideoSection(view: View) {
+        val fotoVideoIntent = Intent(this,ZoriFotoVideoActivity::class.java)
+        startActivity(fotoVideoIntent)
+    }
+    fun CelebrationSection(view: View) {
+        val celebrationIntent = Intent(this,ZoriCelebrationActivity::class.java)
+        startActivity(celebrationIntent)
+    }
+    fun HobbySection(view: View) {
+        val HobbySectionIntent = Intent(this,ZoriHobbyActivity::class.java)
+        startActivity(HobbySectionIntent)
+    }
+    fun ShopSection(view: View) {
+        val ShopSectionIntent = Intent(this,ZoriShopActivity::class.java)
+        startActivity(ShopSectionIntent)
+    }
+    fun RelaxationSection(view: View) {
+        val RelaxationSectionIntent = Intent(this,ZoriRelaxationActivity::class.java)
+        startActivity(RelaxationSectionIntent)
+    }
 }

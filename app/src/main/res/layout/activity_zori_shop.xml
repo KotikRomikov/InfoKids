@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".zori.ZoriShopActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/button130"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="productForKids"
+                android:text="товары для детей" />
+
+            <Button
+                android:id="@+id/button131"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="toys"
+                android:text="игрушки" />
+
+            <Button
+                android:id="@+id/button132"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="handMade"
+                android:text="ручная работа" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
