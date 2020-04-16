@@ -10,7 +10,12 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".apatiti.medical.ApatitiMedicalHospitalActivity"></activity>
+        <activity android:name=".apatiti.relaxation.ApatitiRelaxationKidsOrganizationActivity"></activity>
+        <activity android:name=".apatiti.relaxation.ApatitiRelaxationCafeActivity" />
+        <activity android:name=".apatiti.relaxation.ApatitiRelaxationSportActivity" />
+        <activity android:name=".apatiti.relaxation.ApatitiRelaxationGameCentreActivity" />
+        <activity android:name=".apatiti.ApatitiRelaxationActivity" />
+        <activity android:name=".apatiti.medical.ApatitiMedicalHospitalActivity" />
         <activity android:name=".apatiti.medical.ApatitiMedicalPrivateHospitalActivity" />
         <activity android:name=".apatiti.medical.ApatitiMedicalSanativeActivity" />
         <activity android:name=".apatiti.medical.ApatitiMedicalPsihologiActivity" />
