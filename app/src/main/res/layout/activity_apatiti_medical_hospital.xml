@@ -21,8 +21,10 @@
                 android:layout_height="wrap_content"
                 android:autoLink="web|phone"
                 android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:text="@string/apatiti_medical_hospital"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="italic" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,6 +20,7 @@
                 android:layout_height="wrap_content"
                 android:autoLink="web|phone"
                 android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:text="@string/zori_relaxation_sport"
                 android:textSize="18sp" />
         </LinearLayout>

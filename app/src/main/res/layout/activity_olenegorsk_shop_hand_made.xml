@@ -21,6 +21,7 @@
                 android:layout_height="wrap_content"
                 android:autoLink="web|phone"
                 android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:text="@string/olenegorsk_shop_hand_made"
                 android:textSize="18sp" />
         </LinearLayout>

@@ -22,6 +22,7 @@
                 android:layout_height="wrap_content"
                 android:autoLink="web|phone"
                 android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:text="@string/murmansk_pediator"
                 android:textSize="18sp" />
         </LinearLayout>
