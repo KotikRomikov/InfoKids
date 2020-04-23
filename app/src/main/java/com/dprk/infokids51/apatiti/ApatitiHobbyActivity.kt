@@ -6,10 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.dprk.infokids51.R
-import com.dprk.infokids51.apatiti.hobby.ApatitiHobbyCiprActivity
-import com.dprk.infokids51.apatiti.hobby.ApatitiHobbyDevelopmentCentreActivity
-import com.dprk.infokids51.apatiti.hobby.ApatitiHobbySportsSectionActivity
-import com.dprk.infokids51.apatiti.hobby.ApatitiHobbyTutorsActivity
+import com.dprk.infokids51.apatiti.hobby.*
 import com.dprk.infokids51.murmansk.hobby.*
 
 class ApatitiHobbyActivity : AppCompatActivity() {
@@ -36,37 +33,37 @@ class ApatitiHobbyActivity : AppCompatActivity() {
     }
 
     fun DecorativeApplied(view: View) {
-        val decorativeAppliedIntent = Intent(this,MurmanskHobbyDecorativeAppliedActivity::class.java)
+        val decorativeAppliedIntent = Intent(this, ApatitiHobbyDecorativeAppliedActivity::class.java)
         startActivity(decorativeAppliedIntent)
     }
 
     fun technical(view: View) {
-        val technicalIntent = Intent(this,MurmanskHobbyTechActivity::class.java)
+        val technicalIntent = Intent(this, ApatitiHobbyTechActivity::class.java)
         startActivity(technicalIntent)
     }
 
     fun hobby_choreography(view: View) {
-        val choreographyIntent = Intent(this,MurmanskHobbyChoreographyActivity::class.java)
+        val choreographyIntent = Intent(this, ApatitiHobbyChoreographyActivity::class.java)
         startActivity(choreographyIntent)
     }
 
     fun MusicVocal(view: View) {
-        val musicVocalIntent = Intent(this,MurmanskHobbyMusicVocalActivity::class.java)
+        val musicVocalIntent = Intent(this, ApatitiHobbyMusicVocalActivity::class.java)
         startActivity(musicVocalIntent)
     }
 
     fun Languages(view: View) {
-        val languageIntent = Intent(this,MurmanskHobbyLanguagesActivity::class.java)
+        val languageIntent = Intent(this, ApatitiHobbyLanguagesActivity::class.java)
         startActivity(languageIntent)
     }
 
     fun artwork(view: View) {
-        val artWorkIntent = Intent(this,MurmanskHobbyArtWorkActivity::class.java)
+        val artWorkIntent = Intent(this, ApatitiHobbyArtWorkActivity::class.java)
         startActivity(artWorkIntent)
     }
 
     fun centerOfDevelopment(view: View) {
-        val centerOfDevelopmentIntent = Intent(this,MurmanskHobbyCenterOfDevelopmentActivity::class.java)
+        val centerOfDevelopmentIntent = Intent(this, ApatitiHobbyCenterOfDevelopmentActivity::class.java)
         startActivity(centerOfDevelopmentIntent)
     }
     fun SportsSection(view: View) {

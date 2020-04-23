@@ -279,6 +279,11 @@
         <activity android:name="com.dprk.infokids51.apatiti.hobby.ApatitiHobbySportsSectionActivity" />
         <activity android:name="com.dprk.infokids51.apatiti.hobby.ApatitiHobbyDecorativeAppliedActivity" />
         <activity android:name="com.dprk.infokids51.apatiti.hobby.ApatitiHobbyTechActivity" />
+        <activity android:name=".apatiti.hobby.ApatitiHobbyChoreographyActivity" />
+        <activity android:name=".apatiti.hobby.ApatitiHobbyMusicVocalActivity" />
+        <activity android:name=".apatiti.hobby.ApatitiHobbyArtWorkActivity" />
+        <activity android:name=".apatiti.hobby.ApatitiHobbyLanguagesActivity" />
+        <activity android:name=".apatiti.hobby.ApatitiHobbyCenterOfDevelopmentActivity" />
     </application>
 
 </manifest>
