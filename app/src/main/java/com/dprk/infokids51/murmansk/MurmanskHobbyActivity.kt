@@ -61,10 +61,6 @@ class MurmanskHobbyActivity : AppCompatActivity() {
         startActivity(artWorkIntent)
     }
 
-    fun centerOfDevelopment(view: View) {
-        val centerOfDevelopmentIntent = Intent(this,MurmanskHobbyCenterOfDevelopmentActivity::class.java)
-        startActivity(centerOfDevelopmentIntent)
-    }
     fun SportsSection(view: View) {
         val sportsSectionIntent = Intent(this,MurmanskHobbySportsSectionActivity::class.java)
         startActivity(sportsSectionIntent)

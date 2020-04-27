@@ -29,7 +29,7 @@ class ApatitiCelebrationActivity : AppCompatActivity() {
         startActivity(ballsIntent)
     }
 
-    fun animator() {
+    fun animator(view: View) {
         val animatorIntent = Intent(this,ApatitiCelebrationAnimatorActivity::class.java)
         startActivity(animatorIntent)
     }

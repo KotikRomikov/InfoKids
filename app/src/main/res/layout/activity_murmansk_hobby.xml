@@ -79,13 +79,6 @@
                 android:text="Художественные" />
 
             <Button
-                android:id="@+id/button33"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="centerOfDevelopment"
-                android:text="Центры развития" />
-
-            <Button
                 android:id="@+id/button34"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
