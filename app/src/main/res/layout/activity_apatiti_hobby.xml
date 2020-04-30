@@ -58,13 +58,6 @@
                 android:text="Хореография" />
 
             <Button
-                android:id="@+id/button27"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="MusicVocal"
-                android:text="Музыкальные/вокальные" />
-
-            <Button
                 android:id="@+id/button31"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

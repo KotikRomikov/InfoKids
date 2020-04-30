@@ -8,6 +8,7 @@
         <item name="colorButtonNormal">#B99CED</item> \\ цвет кнопок
         <item name="android:textColorLink">@color/colorPrimary</item> \\ цвет ссылок
         <item name="android:textColorSecondary">#000000</item> \\ цвет текста
+        <item name="android:textSize">20dp</item> \\ размер текста на кнопках
 
 
 

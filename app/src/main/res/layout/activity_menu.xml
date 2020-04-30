@@ -6,72 +6,72 @@
     android:layout_height="match_parent"
     tools:context=".MenuActivity">
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/MurmanskBtn"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Мурманск"
-            android:onClick="MurmanskRazdel"/>
+            android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/SeveromorskBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="SeveromorskRazdel"
-            android:text="Североморск" />
+            <Button
+                android:id="@+id/MurmanskBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="MurmanskRazdel"
+                android:text="Мурманск" />
 
-        <Button
-            android:id="@+id/OlenegorskBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="OlenegorskRazdel"
-            android:text="Оленегорск" />
+            <Button
+                android:id="@+id/SeveromorskBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="SeveromorskRazdel"
+                android:text="Североморск" />
 
-        <Button
-            android:id="@+id/MonchegorskBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="MonchegorskRazdel"
-            android:text="Мончегорск" />
+            <Button
+                android:id="@+id/OlenegorskBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="OlenegorskRazdel"
+                android:text="Оленегорск" />
 
-        <Button
-            android:id="@+id/ApatitiBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="ApatitiRazdel"
-            android:text="Апатиты" />
+            <Button
+                android:id="@+id/MonchegorskBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="MonchegorskRazdel"
+                android:text="Мончегорск" />
 
-        <Button
-            android:id="@+id/KirovskBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="KirovskRazdel"
-            android:text="Кировск" />
+            <Button
+                android:id="@+id/KirovskBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="KirovskRazdel"
+                android:text="Кировск" />
 
-        <Button
-            android:id="@+id/ZoriBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="ZoriRazdel"
-            android:text="Полярные Зори" />
+            <Button
+                android:id="@+id/ApatitiBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ApatitiRazdel"
+                android:text="Апатиты" />
 
-        <Button
-            android:id="@+id/KandalakshaBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="KandalakshaRazdel"
-            android:text="Кандалакша" />
+            <Button
+                android:id="@+id/ZoriBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ZoriRazdel"
+                android:text="Полярные Зори" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/KandalakshaBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="KandalakshaRazdel"
+                android:text="Кандалакша" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

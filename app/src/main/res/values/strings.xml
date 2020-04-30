@@ -539,24 +539,25 @@
      ТЦ СЕВЕР-ТРАНЗИТ, Володарского, 2в\n\n
      ✔BASCO\n
      Солнечный, Скальная, 31\n\n</string>
-    <string name="murmansk_shop_shoes"> "✔ОртоМания | Мурманск | стельки, обувь, ортопедия\n
-        https://vk.com/ortomania\n
-        Рогозерская улица, 4\n\n
-        ✔\"Шагай-ка\": правильная детская обувь и коврики\n
-        https://vk.com/shagai_ka51\n\n
-        ✔Башмачок магазин детской и подростковой обуви\n
-        https://vk.com/bashmak51\n
-        https://bashmak51.ru\n
-        ул. Полярные Зори д. 23\n\n
-        ✔детская обувь \"Обувное королевство\" г. Мурманск\n
-        https://vk.com/obuvnoekorolevstvo\n
-        Полярные Зори, 25/1\n\n
-        ✔ Детская обувь, подростковая -\"Крош\" г. Мурманск\n
-        https://vk.com/krosh51\n
-        А. Невского,92\n\n
-        ✔Котофей\n
-        kotofey.ru\n
-        Murmansk Mall\n\n</string>
+    <string name="murmansk_shop_shoes">
+    ✔ОртоМания | Мурманск | стельки, обувь, ортопедия\n
+    https://vk.com/ortomania\n
+    Рогозерская улица, 4\n\n
+    ✔\"Шагай-ка\": правильная детская обувь и коврики\n
+    https://vk.com/shagai_ka51\n\n
+    ✔Башмачок магазин детской и подростковой обуви\n
+    https://vk.com/bashmak51\n
+    https://bashmak51.ru\n
+    ул. Полярные Зори д. 23\n\n
+    ✔детская обувь \"Обувное королевство\" г. Мурманск\n
+    https://vk.com/obuvnoekorolevstvo\n
+    Полярные Зори, 25/1\n\n
+    ✔ Детская обувь, подростковая -\"Крош\" г. Мурманск\n
+    https://vk.com/krosh51\n
+    А. Невского,92\n\n
+    ✔Котофей\n
+    kotofey.ru\n
+    Murmansk Mall\n\n</string>
     <string name="murmansk_shop_toys">✔Наши УМНЫЕ ДЕТКИ детские товары игрушки Мурманск\n
         https://vk.com/detki_r51\n
         пр. Кольский 140/2\n\n
@@ -3589,22 +3590,21 @@
         https://vk.com/club174906592\n\n
         ✔Прокат товаров для детей \"КучаМала\"\n
         https://vk.com/club187495864\n\n</string>
-        <string name="apatiti_hobby_choreography">
-            " ✔Студия \"Pulse\" и АНО \"СРСКДД \"Пульс\"\n
-            улица Бредова, 18А, Апатиты от 5 до 17 лет\n
-            Клубный танец, современный танец, уличный танец, детские группы от 5 лет. \n
-            +79021371242 https://vk.com/pulseapatity \n\n
-            ✔ Студия танца и фитнеса DanceFamily г. Апатиты \n
-            https://vk.com/dancefamily_ap - классическая хореография - воздушное кольцо для детей \n\n
-            ✔ ☆ ☆ ☆ Школа танцев \"Амина\" ☆ ☆ ☆ \n
-            https://vk.com/amina_studio  \n\n
-            ✔ ЦЕНТР СПОРТИВНОЙ ПОДГОТОВКИ в г.Апатиты \n
-            https://vk.com/freedomdomap ритмика для детей  \n\n
-            ✔танцевальный клуб \"Аллегро\" \n
-            https://vk.com/allegro51_apatity от 4+  \n\n
-            ✔Апатиты -школа танцев от 3 лет Танцевалия \n
-            https://vk.com/public179942697"</string>
-    <string name="apatiti_hobby_music_vocal" />
+    <string name="apatiti_hobby_choreography">
+    ✔Студия \"Pulse\" и АНО \"СРСКДД \"Пульс\"\n
+    улица Бредова, 18А, Апатиты от 5 до 17 лет\n
+    Клубный танец, современный танец, уличный танец, детские группы от 5 лет. \n
+    +79021371242 https://vk.com/pulseapatity \n\n
+    ✔ Студия танца и фитнеса DanceFamily г. Апатиты \n
+    https://vk.com/dancefamily_ap - классическая хореография - воздушное кольцо для детей \n\n
+    ✔ ☆ ☆ ☆ Школа танцев \"Амина\" ☆ ☆ ☆ \n
+    https://vk.com/amina_studio  \n\n
+    ✔ ЦЕНТР СПОРТИВНОЙ ПОДГОТОВКИ в г.Апатиты \n
+    https://vk.com/freedomdomap ритмика для детей  \n\n
+    ✔танцевальный клуб \"Аллегро\" \n
+    https://vk.com/allegro51_apatity от 4+  \n\n
+    ✔Апатиты -школа танцев от 3 лет Танцевалия \n
+    https://vk.com/public179942697"</string>
     <string name="apatiti_hobby_art_work">
     Дк им. Егорова Апатиты\n
     https://vk.com/club15932790\n

@@ -47,11 +47,6 @@ class ApatitiHobbyActivity : AppCompatActivity() {
         startActivity(choreographyIntent)
     }
 
-    fun MusicVocal(view: View) {
-        val musicVocalIntent = Intent(this, ApatitiHobbyMusicVocalActivity::class.java)
-        startActivity(musicVocalIntent)
-    }
-
     fun Languages(view: View) {
         val languageIntent = Intent(this, ApatitiHobbyLanguagesActivity::class.java)
         startActivity(languageIntent)

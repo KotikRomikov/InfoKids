@@ -6,66 +6,65 @@
     android:layout_height="match_parent"
     tools:context=".apatiti.ApatitiSectionActivity">
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/MedicalBtn"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="MedicalSection"
-            android:text="🚑 Медицина" />
+            android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/RelaxationBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="RelaxationSection"
-            android:text="🎪 Развлечения" />
+            <Button
+                android:id="@+id/MedicalBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="MedicalSection"
+                android:text="🚑 Медицина" />
 
-        <Button
-            android:id="@+id/ShopBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="ShopSection"
-            android:text="🛍️ Магазины" />
+            <Button
+                android:id="@+id/RelaxationBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="RelaxationSection"
+                android:text="🎪 Развлечения" />
 
-        <Button
-            android:id="@+id/HobbyBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="HobbySection"
-            android:text="⛹️ Кружки и секции" />
+            <Button
+                android:id="@+id/ShopBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ShopSection"
+                android:text="🛍️ Магазины" />
 
-        <Button
-            android:id="@+id/CelebrationBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="CelebrationSection"
-            android:text="🎉 всё для праздника" />
+            <Button
+                android:id="@+id/HobbyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="HobbySection"
+                android:text="⛹️ Кружки и секции" />
 
-        <Button
-            android:id="@+id/FotoVideoBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="FotoVideoSection"
-            android:text="📷 Фотографы/видеооператоры" />
+            <Button
+                android:id="@+id/CelebrationBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="CelebrationSection"
+                android:text="🎉 всё для праздника" />
 
-        <Button
-            android:id="@+id/OtherBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="OtherSection"
-            android:text="Прочее" />
+            <Button
+                android:id="@+id/FotoVideoBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="FotoVideoSection"
+                android:text="📷 Фотографы/видеооператоры" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/OtherBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="OtherSection"
+                android:text="Прочее" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
