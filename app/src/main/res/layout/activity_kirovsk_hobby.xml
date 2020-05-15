@@ -19,7 +19,6 @@
                 android:id="@+id/button155"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="cipr"
                 android:text="ЦИПР" />
 
             <Button

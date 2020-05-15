@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import com.dprk.infokids51.R
 import com.dprk.infokids51.kirovsk.hobby.*
+import kotlinx.android.synthetic.main.activity_kirovsk_hobby.*
 
 class KirovskHobbyActivity : AppCompatActivity() {
 
@@ -14,12 +15,15 @@ class KirovskHobbyActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         requestedOrientation =  (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         setContentView(R.layout.activity_kirovsk_hobby)
+
+        button155.setOnClickListener{
+            val ciprIntent = Intent(this,KirovskHobbyCiprActivity::class.java)
+            startActivity(ciprIntent)
+        }
     }
 
-    fun cipr(view: View) {
-        val ciprIntent = Intent(this,KirovskHobbyCiprActivity::class.java)
-        startActivity(ciprIntent)
-    }
+
+
     fun developmentCentre(view: View) {
         val developmentCentreIntent = Intent(this,KirovskHobbyDevelompentCentreActivity::class.java)
         startActivity(developmentCentreIntent)
