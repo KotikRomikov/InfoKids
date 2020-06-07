@@ -16,60 +16,52 @@
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/button133"
+                android:id="@+id/cipr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="cipr"
-                android:text="ЦИПР" />
+                android:text="@string/cipr" />
 
             <Button
-                android:id="@+id/button134"
+                android:id="@+id/developmentCentre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="developmentCentre"
-                android:text="Центры развития/ДДТ/ДК" />
+                android:text="@string/development_centre" />
 
             <Button
-                android:id="@+id/button135"
+                android:id="@+id/tutors"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="tutors"
-                android:text="Репетиторы" />
+                android:text="@string/tutors" />
 
             <Button
-                android:id="@+id/button136"
+                android:id="@+id/sport"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="sport"
-                android:text="Спортивные секции" />
+                android:text="@string/sport_section" />
 
             <Button
-                android:id="@+id/button137"
+                android:id="@+id/technical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="technical"
-                android:text="Технические" />
+                android:text="@string/technical" />
 
             <Button
-                android:id="@+id/button138"
+                android:id="@+id/musicVocal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="musicVocal"
-                android:text="Музыкальные/вокальные" />
+                android:text="@string/music_vocal" />
 
             <Button
-                android:id="@+id/button139"
+                android:id="@+id/theatre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="theatre"
                 android:text="Театр/цирк" />
 
             <Button
-                android:id="@+id/button140"
+                android:id="@+id/language"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="language"
-                android:text="Языки" />
+                android:text="@string/language" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

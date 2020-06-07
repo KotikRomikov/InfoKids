@@ -2,45 +2,52 @@ package com.dprk.infokids51.kirovsk
 
 import android.content.Intent
 import android.content.pm.ActivityInfo
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.dprk.infokids51.R
+import kotlinx.android.synthetic.main.activity_kirovsk_section.*
 
 class KirovskSectionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        requestedOrientation =  (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+        requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         setContentView(R.layout.activity_kirovsk_section)
-    }
 
-    fun OtherSection(view: View) {
-        val otherIntent = Intent(this,KirovskOtherActivity::class.java)
-        startActivity(otherIntent)
-    }
-    fun FotoVideoSection(view: View) {
-        val fotoVideoIntent = Intent(this,KirovskFotoVideoActivity::class.java)
-        startActivity(fotoVideoIntent)
-    }
-    fun CelebrationSection(view: View) {
-        val celebrationIntent = Intent(this,KirovskCelebrationActivity::class.java)
-        startActivity(celebrationIntent)
-    }
-    fun HobbySection(view: View) {
-        val hobbyIntent = Intent(this,KirovskHobbyActivity::class.java)
-        startActivity(hobbyIntent)
-    }
-    fun ShopSection(view: View) {
-        val shopIntent = Intent(this,KirovskShopActivity::class.java)
-        startActivity(shopIntent)
-    }
-    fun RelaxationSection(view: View) {
-        val relaxationIntent = Intent(this,KirovskRelaxationActivity::class.java)
-        startActivity(relaxationIntent)
-    }
-    fun MedicalSection(view: View) {
-        val medicalIntent = Intent(this,KirovskMedicalActivity::class.java)
-        startActivity(medicalIntent)
+
+         OtherSection.setOnClickListener {
+            val otherIntent = Intent(this, KirovskOtherActivity::class.java)
+            startActivity(otherIntent)
+        }
+
+         FotoVideoSection.setOnClickListener {
+            val fotoVideoIntent = Intent(this, KirovskFotoVideoActivity::class.java)
+            startActivity(fotoVideoIntent)
+        }
+
+         CelebrationSection.setOnClickListener {
+            val celebrationIntent = Intent(this, KirovskCelebrationActivity::class.java)
+            startActivity(celebrationIntent)
+        }
+
+         HobbySection.setOnClickListener {
+            val hobbyIntent = Intent(this, KirovskHobbyActivity::class.java)
+            startActivity(hobbyIntent)
+        }
+
+         ShopSection.setOnClickListener {
+            val shopIntent = Intent(this, KirovskShopActivity::class.java)
+            startActivity(shopIntent)
+        }
+
+         RelaxationSection.setOnClickListener {
+            val relaxationIntent = Intent(this, KirovskRelaxationActivity::class.java)
+            startActivity(relaxationIntent)
+        }
+
+         MedicalSection.setOnClickListener {
+            val medicalIntent = Intent(this, KirovskMedicalActivity::class.java)
+            startActivity(medicalIntent)
+        }
     }
 }

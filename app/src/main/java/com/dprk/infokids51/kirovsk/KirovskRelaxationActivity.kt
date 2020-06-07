@@ -2,27 +2,29 @@ package com.dprk.infokids51.kirovsk
 
 import android.content.Intent
 import android.content.pm.ActivityInfo
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.dprk.infokids51.R
 import com.dprk.infokids51.kirovsk.relaxation.KirovskRelaxationGamePlaceActivity
 import com.dprk.infokids51.kirovsk.relaxation.KirovskRelaxationSportActivity
+import kotlinx.android.synthetic.main.activity_kirovsk_relaxation.*
 
 class KirovskRelaxationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        requestedOrientation =  (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+        requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         setContentView(R.layout.activity_kirovsk_relaxation)
-    }
 
-    fun gamePlace(view: View) {
-        val gamePlaceIntent = Intent(this,KirovskRelaxationGamePlaceActivity::class.java)
-        startActivity(gamePlaceIntent)
-    }
-    fun sport(view: View) {
-        val sportIntent = Intent(this,KirovskRelaxationSportActivity::class.java)
-        startActivity(sportIntent)
+
+         gamePlace.setOnClickListener {
+            val gamePlaceIntent = Intent(this, KirovskRelaxationGamePlaceActivity::class.java)
+            startActivity(gamePlaceIntent)
+        }
+
+         sport.setOnClickListener {
+            val sportIntent = Intent(this, KirovskRelaxationSportActivity::class.java)
+            startActivity(sportIntent)
+        }
     }
 }

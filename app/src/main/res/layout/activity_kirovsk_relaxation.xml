@@ -16,18 +16,16 @@
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/button149"
+                android:id="@+id/gamePlace"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="gamePlace"
-                android:text="игровые центры/комнаты семейного отдыха" />
+                android:text="@string/game_centre" />
 
             <Button
-                android:id="@+id/button150"
+                android:id="@+id/sport"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="sport"
-                android:text="Спортивно-развлекательные" />
+                android:text="@string/sport_relaxation" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

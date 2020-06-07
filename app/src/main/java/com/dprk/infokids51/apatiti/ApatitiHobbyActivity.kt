@@ -2,67 +2,65 @@ package com.dprk.infokids51.apatiti
 
 import android.content.Intent
 import android.content.pm.ActivityInfo
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.dprk.infokids51.R
 import com.dprk.infokids51.apatiti.hobby.*
-import com.dprk.infokids51.murmansk.hobby.*
+import kotlinx.android.synthetic.main.activity_apatiti_hobby.*
 
 class ApatitiHobbyActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        requestedOrientation =  (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+        requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         setContentView(R.layout.activity_apatiti_hobby)
-    }
 
-    fun apatiti_hobby_cipr(view: View) {
-        val apatitiHobbyCiprIntent = Intent(this, ApatitiHobbyCiprActivity::class.java)
-        startActivity(apatitiHobbyCiprIntent)
-    }
 
-    fun apatiti_hobby_development_centre(view: View) {
-        val apatitiHobbyDevelopmentCentreIntent = Intent(this, ApatitiHobbyDevelopmentCentreActivity::class.java)
-        startActivity(apatitiHobbyDevelopmentCentreIntent)
-    }
+        apatiti_hobby_cipr.setOnClickListener {
+            val apatitiHobbyCiprIntent = Intent(this, ApatitiHobbyCiprActivity::class.java)
+            startActivity(apatitiHobbyCiprIntent)
+        }
 
-    fun apatiti_hobby_tutors(view: View) {
-        val tutorsIntent = Intent(this, ApatitiHobbyTutorsActivity::class.java)
-        startActivity(tutorsIntent)
-    }
+        apatiti_hobby_development_centre.setOnClickListener {
+            val apatitiHobbyDevelopmentCentreIntent =
+                Intent(this, ApatitiHobbyDevelopmentCentreActivity::class.java)
+            startActivity(apatitiHobbyDevelopmentCentreIntent)
+        }
 
-    fun DecorativeApplied(view: View) {
-        val decorativeAppliedIntent = Intent(this, ApatitiHobbyDecorativeAppliedActivity::class.java)
-        startActivity(decorativeAppliedIntent)
-    }
+        apatiti_hobby_tutors.setOnClickListener {
+            val tutorsIntent = Intent(this, ApatitiHobbyTutorsActivity::class.java)
+            startActivity(tutorsIntent)
+        }
 
-    fun technical(view: View) {
-        val technicalIntent = Intent(this, ApatitiHobbyTechActivity::class.java)
-        startActivity(technicalIntent)
-    }
+        DecorativeApplied.setOnClickListener {
+            val decorativeAppliedIntent =
+                Intent(this, ApatitiHobbyDecorativeAppliedActivity::class.java)
+            startActivity(decorativeAppliedIntent)
+        }
 
-    fun hobby_choreography(view: View) {
-        val choreographyIntent = Intent(this, ApatitiHobbyChoreographyActivity::class.java)
-        startActivity(choreographyIntent)
-    }
+        technical.setOnClickListener {
+            val technicalIntent = Intent(this, ApatitiHobbyTechActivity::class.java)
+            startActivity(technicalIntent)
+        }
 
-    fun Languages(view: View) {
-        val languageIntent = Intent(this, ApatitiHobbyLanguagesActivity::class.java)
-        startActivity(languageIntent)
-    }
+        hobby_choreography.setOnClickListener {
+            val choreographyIntent = Intent(this, ApatitiHobbyChoreographyActivity::class.java)
+            startActivity(choreographyIntent)
+        }
 
-    fun artwork(view: View) {
-        val artWorkIntent = Intent(this, ApatitiHobbyArtWorkActivity::class.java)
-        startActivity(artWorkIntent)
-    }
+        Languages.setOnClickListener {
+            val languageIntent = Intent(this, ApatitiHobbyLanguagesActivity::class.java)
+            startActivity(languageIntent)
+        }
 
-    fun centerOfDevelopment(view: View) {
-        val centerOfDevelopmentIntent = Intent(this, ApatitiHobbyCenterOfDevelopmentActivity::class.java)
-        startActivity(centerOfDevelopmentIntent)
-    }
-    fun SportsSection(view: View) {
-        val sportsSectionIntent = Intent(this, ApatitiHobbySportsSectionActivity::class.java)
-        startActivity(sportsSectionIntent)
+        artwork.setOnClickListener {
+            val artWorkIntent = Intent(this, ApatitiHobbyArtWorkActivity::class.java)
+            startActivity(artWorkIntent)
+        }
+
+        SportsSection.setOnClickListener {
+            val sportsSectionIntent = Intent(this, ApatitiHobbySportsSectionActivity::class.java)
+            startActivity(sportsSectionIntent)
+        }
     }
 }

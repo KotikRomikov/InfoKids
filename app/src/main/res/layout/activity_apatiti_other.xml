@@ -16,18 +16,16 @@
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/button165"
+                android:id="@+id/hire"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="hire"
-                android:text="прокат" />
+                android:text="@string/hire" />
 
             <Button
-                android:id="@+id/button166"
+                android:id="@+id/nannies"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="nannies"
-                android:text="няни/частные детсады" />
+                android:text="@string/nannies" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

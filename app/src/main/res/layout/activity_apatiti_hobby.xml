@@ -16,74 +16,58 @@
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/button16"
+                android:id="@+id/apatiti_hobby_cipr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="apatiti_hobby_cipr"
-                android:text="ципр" />
+                android:text="@string/cipr" />
 
             <Button
-                android:id="@+id/button17"
+                android:id="@+id/apatiti_hobby_development_centre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="apatiti_hobby_development_centre"
-                android:text="Центры развития" />
+                android:text="@string/development_centre" />
 
             <Button
-                android:id="@+id/button26"
+                android:id="@+id/apatiti_hobby_tutors"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="apatiti_hobby_tutors"
-                android:text="Репетиторы" />
+                android:text="@string/tutors" />
 
             <Button
-                android:id="@+id/button28"
+                android:id="@+id/DecorativeApplied"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="DecorativeApplied"
-                android:text="Декоративно-прикладное" />
+                android:text="@string/decorative_applied" />
 
             <Button
-                android:id="@+id/button29"
+                android:id="@+id/technical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="technical"
-                android:text="Технические" />
+                android:text="@string/technical" />
 
             <Button
-                android:id="@+id/button30"
+                android:id="@+id/hobby_choreography"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="hobby_choreography"
-                android:text="Хореография" />
+                android:text="@string/choreography" />
 
             <Button
-                android:id="@+id/button31"
+                android:id="@+id/Languages"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Languages"
-                android:text="Языки" />
+                android:text="@string/language" />
 
             <Button
-                android:id="@+id/button32"
+                android:id="@+id/artwork"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="artwork"
-                android:text="Художественные" />
+                android:text="@string/artwork" />
 
             <Button
-                android:id="@+id/button33"
+                android:id="@+id/SportsSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="centerOfDevelopment"
-                android:text="Центры развития" />
-
-            <Button
-                android:id="@+id/button34"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="SportsSection"
-                android:text="Спортивные секции" />
+                android:text="@string/sport_section" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

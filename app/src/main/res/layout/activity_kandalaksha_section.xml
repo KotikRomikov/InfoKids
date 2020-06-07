@@ -16,46 +16,40 @@
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/MedicalBtn"
+                android:id="@+id/MedicalSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="MedicalSection"
-                android:text="🚑 Медицина" />
+                android:text="@string/medical_section" />
 
             <Button
-                android:id="@+id/RelaxationBtn"
+                android:id="@+id/RelaxationSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="RelaxationSection"
-                android:text="🎪 Развлечения" />
+                android:text="@string/relaxation_section" />
 
             <Button
-                android:id="@+id/ShopBtn"
+                android:id="@+id/ShopSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="ShopSection"
-                android:text="🛍️ Магазины" />
+                android:text="@string/shop_section" />
 
             <Button
-                android:id="@+id/HobbyBtn"
+                android:id="@+id/HobbySection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="HobbySection"
-                android:text="⛹️ Кружки и секции" />
+                android:text="@string/hobby_section" />
 
             <Button
-                android:id="@+id/CelebrationBtn"
+                android:id="@+id/CelebrationSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="CelebrationSection"
-                android:text="🎉 всё для праздника" />
+                android:text="@string/celebration_section" />
 
             <Button
-                android:id="@+id/FotoVideoBtn"
+                android:id="@+id/FotoVideoSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="FotoVideoSection"
-                android:text="📷 Фотографы/видеооператоры" />
+                android:text="@string/foto_video_section" />
 
         </LinearLayout>
     </ScrollView>

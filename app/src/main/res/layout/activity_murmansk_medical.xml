@@ -16,67 +16,58 @@
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/pediatorMurmansk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="pediatorMurmansk"
-                android:text="Педиатр" />
+                android:text="@string/pediator" />
 
             <Button
-                android:id="@+id/button18"
+                android:id="@+id/nevrologMurmansk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="nevrologMurmansk"
-                android:text="Невролог" />
+                android:text="@string/nevrolog" />
 
             <Button
-                android:id="@+id/button19"
+                android:id="@+id/massagMurmansk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="massagMurmansk"
-                android:text="массажисты" />
+                android:text="@string/massage" />
 
             <Button
-                android:id="@+id/button20"
+                android:id="@+id/logopediMurmansk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="logopediMurmansk"
-                android:text="логопеды" />
+                android:text="@string/logoped" />
 
             <Button
-                android:id="@+id/button22"
+                android:id="@+id/psihologiMurmansk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="psihologiMurmansk"
-                android:text="психологи" />
+                android:text="@string/psihologi" />
 
             <Button
-                android:id="@+id/button23"
+                android:id="@+id/grudnMurmansk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="grudnMurmansk"
-                android:text=" грудное вскармливание" />
+                android:text="@string/grudnoe" />
 
             <Button
-                android:id="@+id/button21"
+                android:id="@+id/hospitalMurmansk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="hospitalMurmansk"
-                android:text="Больницы" />
+                android:text="@string/hospital" />
 
             <Button
-                android:id="@+id/button24"
+                android:id="@+id/rodiHouseMurmansk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="rodiHouseMurmansk"
-                android:text="Родильный дом" />
+                android:text="@string/rodi_house" />
 
             <Button
-                android:id="@+id/button25"
+                android:id="@+id/privateHospitalMurmansk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="privateHospitalMurmansk"
-                android:text="Частные клиники" />
+                android:text="@string/private_hospital" />
         </LinearLayout>
     </ScrollView>
 

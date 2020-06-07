@@ -16,25 +16,22 @@
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/button46"
+                android:id="@+id/game_place"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="game_place"
-                android:text="игровые центры/комнаты семейного отдыха" />
+                android:text="@string/game_centre" />
 
             <Button
-                android:id="@+id/button47"
+                android:id="@+id/sport_relaxion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="sport_relaxion"
-                android:text="Спортивно-развлекательные" />
+                android:text="@string/sport_relaxation" />
 
             <Button
-                android:id="@+id/button48"
+                android:id="@+id/kids_organization"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="kids_organization"
-                android:text="молодёжные организации" />
+                android:text="@string/kids_organization" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

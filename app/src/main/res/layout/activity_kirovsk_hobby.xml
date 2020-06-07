@@ -16,45 +16,40 @@
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/button155"
+                android:id="@+id/Cipr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ЦИПР" />
+                android:text="@string/cipr" />
 
             <Button
-                android:id="@+id/button156"
+                android:id="@+id/developmentCentre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="developmentCentre"
-                android:text="Центры развития/ЦДТ/ДК" />
+                android:text="@string/development_centre" />
 
             <Button
-                android:id="@+id/button157"
+                android:id="@+id/sport"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="sport"
-                android:text="Спортивные секции" />
+                android:text="@string/sport_section" />
 
             <Button
-                android:id="@+id/button158"
+                android:id="@+id/technical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="technical"
-                android:text="Технические" />
+                android:text="@string/technical" />
 
             <Button
-                android:id="@+id/button159"
+                android:id="@+id/choreography"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="choreography"
-                android:text="Хореография" />
+                android:text="@string/choreography" />
 
             <Button
-                android:id="@+id/button160"
+                android:id="@+id/languages"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="languages"
-                android:text="Языки" />
+                android:text="@string/language" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

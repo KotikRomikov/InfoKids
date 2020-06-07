@@ -16,32 +16,28 @@
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/button78"
+                android:id="@+id/cakes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="cakes"
-                android:text="торты" />
+                android:text="@string/cakes" />
 
             <Button
-                android:id="@+id/button79"
+                android:id="@+id/balls"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="balls"
-                android:text="шары" />
+                android:text="@string/balls" />
 
             <Button
-                android:id="@+id/button80"
+                android:id="@+id/animator"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="animator"
-                android:text="аниматоры" />
+                android:text="@string/animator" />
 
             <Button
-                android:id="@+id/button81"
+                android:id="@+id/other"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="other"
-                android:text="Прочее" />
+                android:text="@string/other" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

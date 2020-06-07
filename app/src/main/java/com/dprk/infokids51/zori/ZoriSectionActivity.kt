@@ -2,10 +2,10 @@ package com.dprk.infokids51.zori
 
 import android.content.Intent
 import android.content.pm.ActivityInfo
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.dprk.infokids51.R
+import kotlinx.android.synthetic.main.activity_zori_section.*
 
 class ZoriSectionActivity : AppCompatActivity() {
 
@@ -13,34 +13,35 @@ class ZoriSectionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         requestedOrientation =  (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         setContentView(R.layout.activity_zori_section)
-    }
 
-    fun MedicalSection(view: View) {
+
+     MedicalSection.setOnClickListener {
         val MedicalSectionIntent = Intent(this,ZoriMedicalActivity::class.java)
         startActivity(MedicalSectionIntent)
     }
-    fun OtherSection(view: View) {
+     OtherSection.setOnClickListener {
         val otherIntent = Intent(this,ZoriOtherActivity::class.java)
         startActivity(otherIntent)
     }
-    fun FotoVideoSection(view: View) {
+     FotoVideoSection.setOnClickListener {
         val fotoVideoIntent = Intent(this,ZoriFotoVideoActivity::class.java)
         startActivity(fotoVideoIntent)
     }
-    fun CelebrationSection(view: View) {
+     CelebrationSection.setOnClickListener {
         val celebrationIntent = Intent(this,ZoriCelebrationActivity::class.java)
         startActivity(celebrationIntent)
     }
-    fun HobbySection(view: View) {
+     HobbySection.setOnClickListener {
         val HobbySectionIntent = Intent(this,ZoriHobbyActivity::class.java)
         startActivity(HobbySectionIntent)
     }
-    fun ShopSection(view: View) {
+     ShopSection.setOnClickListener {
         val ShopSectionIntent = Intent(this,ZoriShopActivity::class.java)
         startActivity(ShopSectionIntent)
     }
-    fun RelaxationSection(view: View) {
+     RelaxationSection.setOnClickListener {
         val RelaxationSectionIntent = Intent(this,ZoriRelaxationActivity::class.java)
         startActivity(RelaxationSectionIntent)
     }
+}
 }

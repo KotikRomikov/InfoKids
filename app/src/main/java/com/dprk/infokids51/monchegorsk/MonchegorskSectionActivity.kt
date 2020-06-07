@@ -2,45 +2,52 @@ package com.dprk.infokids51.monchegorsk
 
 import android.content.Intent
 import android.content.pm.ActivityInfo
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.dprk.infokids51.R
+import kotlinx.android.synthetic.main.activity_monchegorsk_section.*
 
 class MonchegorskSectionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        requestedOrientation =  (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+        requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         setContentView(R.layout.activity_monchegorsk_section)
-    }
 
-    fun OtherSection(view: View) {
-        val otherIntent = Intent(this,MonchegorskOtherActivity::class.java)
-        startActivity(otherIntent)
-    }
-    fun FotoVideoSection(view: View) {
-        val FotoVideoSectionIntent = Intent(this,MonchegorskFotoVideoActivity::class.java)
-        startActivity(FotoVideoSectionIntent)
-    }
-    fun CelebrationSection(view: View) {
-        val CelebrationSectionIntent = Intent(this,MonchegorskCelebrationActivity::class.java)
-        startActivity(CelebrationSectionIntent)
-    }
-    fun HobbySection(view: View) {
-        val hobbyIntent = Intent(this,MonchegorskHobbyActivity::class.java)
-        startActivity(hobbyIntent)
-    }
-    fun RelaxationSection(view: View) {
-        val relaxationIntent = Intent(this,MonchegorskRelaxationActivity::class.java)
-        startActivity(relaxationIntent)
-    }
-    fun MedicalSection(view: View) {
-        val medicalIntent = Intent(this,MonchegorskMedicalActivity::class.java)
-        startActivity(medicalIntent)
-    }
-    fun ShopSection(view: View) {
-        val shopIntent = Intent(this,MonchegorskShopActivity::class.java)
-        startActivity(shopIntent)
+
+         OtherSection.setOnClickListener {
+            val otherIntent = Intent(this, MonchegorskOtherActivity::class.java)
+            startActivity(otherIntent)
+        }
+
+         FotoVideoSection.setOnClickListener {
+            val FotoVideoSectionIntent = Intent(this, MonchegorskFotoVideoActivity::class.java)
+            startActivity(FotoVideoSectionIntent)
+        }
+
+         CelebrationSection.setOnClickListener {
+            val CelebrationSectionIntent = Intent(this, MonchegorskCelebrationActivity::class.java)
+            startActivity(CelebrationSectionIntent)
+        }
+
+         HobbySection.setOnClickListener {
+            val hobbyIntent = Intent(this, MonchegorskHobbyActivity::class.java)
+            startActivity(hobbyIntent)
+        }
+
+         RelaxationSection.setOnClickListener {
+            val relaxationIntent = Intent(this, MonchegorskRelaxationActivity::class.java)
+            startActivity(relaxationIntent)
+        }
+
+         MedicalSection.setOnClickListener {
+            val medicalIntent = Intent(this, MonchegorskMedicalActivity::class.java)
+            startActivity(medicalIntent)
+        }
+
+         ShopSection.setOnClickListener {
+            val shopIntent = Intent(this, MonchegorskShopActivity::class.java)
+            startActivity(shopIntent)
+        }
     }
 }

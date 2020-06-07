@@ -16,53 +16,46 @@
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/button167"
+                android:id="@+id/doctor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="doctor"
-                android:text="Врачи" />
+                android:text="@string/doctor" />
 
             <Button
-                android:id="@+id/button168"
+                android:id="@+id/massage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="massage"
-                android:text="массажисты" />
+                android:text="@string/massage" />
 
             <Button
-                android:id="@+id/button169"
+                android:id="@+id/logoped"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="logoped"
-                android:text="логопед" />
+                android:text="@string/logoped" />
 
             <Button
-                android:id="@+id/button170"
+                android:id="@+id/psihologi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="psihologi"
-                android:text="психолог" />
+                android:text="@string/psihologi" />
 
             <Button
-                android:id="@+id/button171"
+                android:id="@+id/sanative"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="sanative"
-                android:text="Оздоровительные" />
+                android:text="@string/sanative" />
 
             <Button
-                android:id="@+id/button172"
+                android:id="@+id/privateHospital"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="privateHospital"
-                android:text="Частные клиники" />
+                android:text="@string/private_hospital" />
 
             <Button
-                android:id="@+id/button173"
+                android:id="@+id/hospital"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="hospital"
-                android:text="Больницы" />
+                android:text="@string/hospital" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

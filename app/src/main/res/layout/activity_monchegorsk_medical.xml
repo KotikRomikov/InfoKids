@@ -16,32 +16,28 @@
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/button82"
+                android:id="@+id/Hospital"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Hospital"
-                android:text="Больницы" />
+                android:text="@string/hospital" />
 
             <Button
-                android:id="@+id/button83"
+                android:id="@+id/massage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="massage"
-                android:text="массажисты" />
+                android:text="@string/massage" />
 
             <Button
-                android:id="@+id/button84"
+                android:id="@+id/logoped"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="logoped"
-                android:text="логопеды" />
+                android:text="@string/logoped" />
 
             <Button
-                android:id="@+id/button85"
+                android:id="@+id/psihologi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="psihologi"
-                android:text="психологи" />
+                android:text="@string/psihologi" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

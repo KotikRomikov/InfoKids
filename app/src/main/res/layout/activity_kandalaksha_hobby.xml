@@ -16,46 +16,40 @@
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/button118"
+                android:id="@+id/cipr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="cipr"
-                android:text="ЦИПР" />
+                android:text="@string/cipr" />
 
             <Button
-                android:id="@+id/button119"
+                android:id="@+id/development_centre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="development_centre"
-                android:text="Центры развития/ДК" />
+                android:text="@string/development_centre" />
 
             <Button
-                android:id="@+id/button120"
+                android:id="@+id/sport_section"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="sport_section"
-                android:text="Спортивные секции" />
+                android:text="@string/sport_section" />
 
             <Button
-                android:id="@+id/button121"
+                android:id="@+id/choreography"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="choreography"
-                android:text="Хореография" />
+                android:text="@string/choreography" />
 
             <Button
-                android:id="@+id/button122"
+                android:id="@+id/music_vocal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="music_vocal"
-                android:text="Музыкальные/вокальные" />
+                android:text="@string/music_vocal" />
 
             <Button
-                android:id="@+id/button123"
+                android:id="@+id/art_work"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="art_work"
-                android:text="Художественные" />
+                android:text="@string/artwork" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

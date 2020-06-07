@@ -16,32 +16,28 @@
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/button74"
+                android:id="@+id/cipr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="cipr"
-                android:text="ЦИПР" />
+                android:text="@string/apatiti_hobby_cipr" />
 
             <Button
-                android:id="@+id/button75"
+                android:id="@+id/center_of_development"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="center_of_development"
-                android:text="Центры развития/ДК" />
+                android:text="@string/development_centre" />
 
             <Button
-                android:id="@+id/button76"
+                android:id="@+id/choreography"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="choreography"
-                android:text="Хореография" />
+                android:text="@string/choreography" />
 
             <Button
-                android:id="@+id/button77"
+                android:id="@+id/sport_section"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="sport_section"
-                android:text="Спортивные секции" />
+                android:text="@string/sport_section" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
