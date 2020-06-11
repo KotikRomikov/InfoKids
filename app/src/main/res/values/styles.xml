@@ -1,14 +1,16 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
         <!-- Customize your theme here. -->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorButtonNormal">#B99CED</item> \\ цвет кнопок
         <item name="android:textColorLink">@color/colorPrimary</item> \\ цвет ссылок
         <item name="android:textColorSecondary">#000000</item> \\ цвет текста
-        <item name="android:textSize">20dp</item> \\ размер текста на кнопках
+        <item name="android:textSize">20sp</item> \\ размер текста на кнопках
+
+
 
 
 
