@@ -9,6 +9,10 @@
         <item name="android:textColorLink">@color/colorPrimary</item> \\ цвет ссылок
         <item name="android:textColorSecondary">#000000</item> \\ цвет текста
         <item name="android:textSize">20sp</item> \\ размер текста на кнопках
+        <item name="android:layout_marginLeft">4dp</item> \\ отступ слева
+        <item name="android:layout_marginRight">4dp</item> \\ отступ справа
+
+
 
 
 
