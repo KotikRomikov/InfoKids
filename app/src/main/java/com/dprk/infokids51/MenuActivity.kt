@@ -2,6 +2,7 @@ package com.dprk.infokids51
 
 import android.content.Intent
 import android.content.pm.ActivityInfo
+import android.database.Cursor
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -23,10 +24,6 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         setContentView(R.layout.activity_menu)
-
-
-
-
 
         MurmanskRazdel.setOnClickListener {
             val murmanskRazdelIntent = Intent(
@@ -67,6 +64,18 @@ class MenuActivity : AppCompatActivity() {
         }
 
          KandalakshaRazdel.setOnClickListener {
+
+             var product = ""
+
+             val cursor: Cursor = MainActivity.mDb!!.query(MainActivity.mDBHelper, "Data", null, null, null, null, null, null, 10 )
+             cursor.moveToFirst()
+             while (!cursor.isAfterLast()) {
+                 product += cursor.getString(1).toString() + " | "
+                 cursor.moveToNext()
+             }
+             cursor.close()
+
+             textView.setText(product)
 
              Toast.makeText(this, "${MenuButtonID}", Toast.LENGTH_SHORT).show()
              var numm: Long = MenuButtonID + KandalakshaRazdel.id.toLong()

@@ -2,20 +2,41 @@ package com.dprk.infokids51
 
 import android.content.Intent
 import android.content.pm.ActivityInfo
+import android.database.SQLException
+import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.IOException
 
 
 class MainActivity : AppCompatActivity() {
 
     companion object {
         var MenuButtonID: Long = 0
+        var mDBHelper: DatabaseHelper? = null
+        var mDb: SQLiteDatabase? = null
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        mDBHelper = DatabaseHelper(this)
+
+        try {
+            mDBHelper!!.updateDataBase()
+        } catch (mIOException: IOException) {
+            throw Error("UnableToUpdateDatabase")
+        }
+
+        mDb = try {
+            mDBHelper!!.writableDatabase
+        } catch (mSQLException: SQLException) {
+            throw mSQLException
+        }
+
+
         requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         setContentView(R.layout.activity_main)
 
