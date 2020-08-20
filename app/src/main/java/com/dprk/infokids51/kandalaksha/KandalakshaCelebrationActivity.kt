@@ -18,7 +18,6 @@ class KandalakshaCelebrationActivity : AppCompatActivity() {
         requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         setContentView(R.layout.activity_kandalaksha_celebration)
 
-
          cakes.setOnClickListener {
             val cakesIntent = Intent(this, KandalakshaCelebrationCakesActivity::class.java)
             startActivity(cakesIntent)

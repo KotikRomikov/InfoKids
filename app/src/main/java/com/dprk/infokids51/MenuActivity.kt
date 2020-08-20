@@ -3,9 +3,10 @@ package com.dprk.infokids51
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.dprk.infokids51.MainActivity.Companion.MenuButtonID
 import com.dprk.infokids51.apatiti.ApatitiSectionActivity
-import com.dprk.infokids51.kandalaksha.KandalakshaSectionActivity
 import com.dprk.infokids51.kirovsk.KirovskSectionActivity
 import com.dprk.infokids51.monchegorsk.MonchegorskSectionActivity
 import com.dprk.infokids51.murmansk.MurmanskSectionActivity
@@ -14,7 +15,9 @@ import com.dprk.infokids51.severomorsk.SeveromorskSectionActivity
 import com.dprk.infokids51.zori.ZoriSectionActivity
 import kotlinx.android.synthetic.main.activity_menu.*
 
+
 class MenuActivity : AppCompatActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +25,10 @@ class MenuActivity : AppCompatActivity() {
         setContentView(R.layout.activity_menu)
 
 
-         MurmanskRazdel.setOnClickListener {
+
+
+
+        MurmanskRazdel.setOnClickListener {
             val murmanskRazdelIntent = Intent(
                 this,
                 MurmanskSectionActivity::class.java
@@ -61,9 +67,18 @@ class MenuActivity : AppCompatActivity() {
         }
 
          KandalakshaRazdel.setOnClickListener {
-            val kandalakshaSectionIntent = Intent(this, KandalakshaSectionActivity::class.java)
-            startActivity(kandalakshaSectionIntent)
-        }
+
+             Toast.makeText(this, "${MenuButtonID}", Toast.LENGTH_SHORT).show()
+             var numm: Long = MenuButtonID + KandalakshaRazdel.id.toLong()
+             when {
+                 numm == 4262461469 -> {
+                     val kandalakshaSectionIntent = Intent(this, TestActivity::class.java)
+                     startActivity(kandalakshaSectionIntent)
+                 }
+             }
+//             val kandalakshaSectionIntent = Intent(this, KandalakshaSectionActivity::class.java)
+//            startActivity(kandalakshaSectionIntent)
+         }
 
     }
 }
