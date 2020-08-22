@@ -3,6 +3,7 @@ package com.dprk.infokids51
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.database.Cursor
+import android.database.DatabaseErrorHandler
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -18,10 +19,15 @@ import kotlinx.android.synthetic.main.activity_menu.*
 
 
 class MenuActivity : AppCompatActivity() {
-
+    var DbHandler : DatabaseHelper? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+        //init db
+        DbHandler = DatabaseHelper(this)
+
         requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         setContentView(R.layout.activity_menu)
 
@@ -65,20 +71,18 @@ class MenuActivity : AppCompatActivity() {
 
          KandalakshaRazdel.setOnClickListener {
 
-             var product = ""
-
-             val cursor: Cursor = MainActivity.mDb!!.query(MainActivity.mDBHelper, "Data", null, null, null, null, null, null, 10 )
+             var key : Int= 125
+             val cursor = MainActivity.mDb.rawQuery("SELECT * FROM testtable;", null)
              cursor.moveToFirst()
-             while (!cursor.isAfterLast()) {
-                 product += cursor.getString(1).toString() + " | "
+             while (!cursor.isAfterLast){
+                 key = cursor.getInt(cursor.getColumnIndex("KEY_id"))
                  cursor.moveToNext()
+                 Toast.makeText(this, "KEY_id = $key", Toast.LENGTH_SHORT).show()
              }
              cursor.close()
 
-             textView.setText(product)
-
-             Toast.makeText(this, "${MenuButtonID}", Toast.LENGTH_SHORT).show()
-             var numm: Long = MenuButtonID + KandalakshaRazdel.id.toLong()
+             //Toast.makeText(this, "${MenuButtonID}", Toast.LENGTH_SHORT).show()
+             val numm: Long = MenuButtonID + KandalakshaRazdel.id.toLong()
              when {
                  numm == 4262461469 -> {
                      val kandalakshaSectionIntent = Intent(this, TestActivity::class.java)
