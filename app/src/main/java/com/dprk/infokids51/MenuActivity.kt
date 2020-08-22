@@ -5,6 +5,7 @@ import android.content.pm.ActivityInfo
 import android.database.Cursor
 import android.database.DatabaseErrorHandler
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.dprk.infokids51.MainActivity.Companion.MenuButtonID
@@ -72,12 +73,19 @@ class MenuActivity : AppCompatActivity() {
          KandalakshaRazdel.setOnClickListener {
 
              var key : Int= 125
+             var name = ""
+             var email = ""
              val cursor = MainActivity.mDb.rawQuery("SELECT * FROM testtable;", null)
              cursor.moveToFirst()
              while (!cursor.isAfterLast){
                  key = cursor.getInt(cursor.getColumnIndex("KEY_id"))
+                 name = cursor.getString(cursor.getColumnIndex("NAME"))
+                 email = cursor.getString(cursor.getColumnIndex("EMAIL"))
                  cursor.moveToNext()
-                 Toast.makeText(this, "KEY_id = $key", Toast.LENGTH_SHORT).show()
+                 Log.d("CURSOR", "KEY_id = $key")
+                 Log.d("CURSOR", "NAME = $name")
+                 Log.d("CURSOR", "EMAIL = $email")
+
              }
              cursor.close()
 

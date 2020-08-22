@@ -20,11 +20,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        DatabaseHelper(this).copyDB()
+        //DatabaseHelper(this).testing()
         val mDBHelper = DatabaseHelper(this)
 
         try {
-            mDBHelper.updateDB()
+            mDBHelper.copyDB()
         } catch (mIOException: IOException) {
             throw Error("UnableToUpdateDatabase")
         }

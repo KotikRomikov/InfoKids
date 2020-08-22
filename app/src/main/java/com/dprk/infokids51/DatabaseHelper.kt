@@ -27,7 +27,10 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
         Log.d("UPDATE DB", "START")
         if (mNeedUpdate) {
             val dbFile = File(DB_PATH + DB_NAME)
-            if (dbFile.exists()) dbFile.delete()
+            if (dbFile.exists()) {
+                dbFile.delete()
+                Log.d("UPDATE DB", "DELETE OLD DB")
+            }
             copyDB()
             mNeedUpdate = false
         }
@@ -47,10 +50,11 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
         }
     }
 
+    //Копирование БД из папки assets на устройство
     @Throws(IOException::class)
     private fun copyDBFile() {
         Log.d("COPY FILE BASE", "START")
-        val mInput: InputStream = mContext!!.assets.open(DB_NAME)
+        val mInput: InputStream = mContext.assets.open(DB_NAME)
         //InputStream mInput = mContext.getResources().openRawResource(R.raw.info);
         val mOutput: OutputStream = FileOutputStream(DB_PATH + DB_NAME)
         val mBuffer = ByteArray(1024)
@@ -65,9 +69,11 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
     private fun checkDb(): Boolean {
         Log.d("CHECK BASE", "START")
         val dbFile = File(DB_PATH+DB_NAME)
+        Log.d("CHECK BASE", dbFile.exists().toString())
         return dbFile.exists()
     }
 
+    //тестовое открытие БД
     @Throws(SQLException::class)
     fun openDataBase(): Boolean {
         Log.d("OPEN BASE", "START")
@@ -76,14 +82,19 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
         return mDataBase != null
     }
 
-    override fun onCreate(db: SQLiteDatabase?) {
+    //Обязательная функция
+    override fun onCreate(db: SQLiteDatabase?) {    }
 
+    //Обновление БД при первом запуске приложения и переустановки обновленной
+    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, DB_VERSION : Int) {
+        Log.d("onUpgrade DB", "START")
+        if (oldVersion < DB_VERSION) {
+            mNeedUpdate = true
+            copyDB()
+        }
     }
 
-    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        if (oldVersion < newVersion) mNeedUpdate = true
-    }
-
+    //Синхронизация сделана по рекомендациям, на сколько обязательна не знаю
     @Synchronized
     override fun close() {
         if (mDataBase != null) mDataBase!!.close()
