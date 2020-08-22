@@ -12,7 +12,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
 
     companion object {
         val DB_NAME = "info.db"
-        val DB_VERSION = 1
+        val DB_VERSION = 2
     }
 
     var DB_PATH = context.applicationInfo.dataDir + "/databases/"
@@ -21,34 +21,6 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
     var mNeedUpdate = false
     var mDataBase: SQLiteDatabase? = null
     private var mContext = context
-
-    @Throws(IOException::class)
-    fun updateDB() {
-        Log.d("UPDATE DB", "START")
-        if (mNeedUpdate) {
-            val dbFile = File(DB_PATH + DB_NAME)
-            if (dbFile.exists()) {
-                dbFile.delete()
-                Log.d("UPDATE DB", "DELETE OLD DB")
-            }
-            copyDB()
-            mNeedUpdate = false
-        }
-    }
-
-    //Копирование
-    fun copyDB () {
-        Log.d("COPY BASE", "START")
-        if (!checkDb()) {
-            this.readableDatabase
-            this.close()
-            try {
-                copyDBFile()
-            } catch (mIOException: IOException) {
-                throw Error("ErrorCopyingDataBase")
-            }
-        }
-    }
 
     //Копирование БД из папки assets на устройство
     @Throws(IOException::class)
@@ -65,20 +37,12 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
         mInput.close()
     }
 
-    //Проверка существования BD в папке программы
-    private fun checkDb(): Boolean {
-        Log.d("CHECK BASE", "START")
-        val dbFile = File(DB_PATH+DB_NAME)
-        Log.d("CHECK BASE", dbFile.exists().toString())
-        return dbFile.exists()
-    }
-
     //тестовое открытие БД
     @Throws(SQLException::class)
     fun openDataBase(): Boolean {
         Log.d("OPEN BASE", "START")
         mDataBase =
-            SQLiteDatabase.openDatabase(DB_PATH + DB_NAME, null, SQLiteDatabase.CREATE_IF_NECESSARY)
+            SQLiteDatabase.openDatabase(DB_PATH + DB_NAME, null, SQLiteDatabase.OPEN_READONLY)
         return mDataBase != null
     }
 
@@ -89,8 +53,16 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, DB_VERSION : Int) {
         Log.d("onUpgrade DB", "START")
         if (oldVersion < DB_VERSION) {
-            mNeedUpdate = true
-            copyDB()
+            val dbFile = File(DB_PATH + DB_NAME)
+            if (dbFile.exists()) {
+                dbFile.delete()
+                Log.d("UPDATE DB", "DELETE OLD DB")
+                try {
+                    copyDBFile()
+                } catch (mIOException: IOException) {
+                    throw Error("ErrorCopyingDataBase")
+                }
+            }
         }
     }
 
@@ -100,4 +72,21 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
         if (mDataBase != null) mDataBase!!.close()
         super.close()
     }
+
+    fun start(){
+        if (File(DB_PATH+DB_NAME).exists()) {
+            Log.d("TEST", "File $DB_NAME EXISTS")
+        }
+        else{
+            Log.d("TEST", "File $DB_NAME NOT EXISTS")
+            this.readableDatabase
+            this.close()
+            try {
+                copyDBFile()
+            } catch (mIOException: IOException) {
+                throw Error("ErrorCopyingDataBase")
+            }
+        }
+    }
+
 }

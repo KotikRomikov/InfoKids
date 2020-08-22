@@ -9,6 +9,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.dprk.infokids51.MainActivity.Companion.MenuButtonID
+import com.dprk.infokids51.MainActivity.Companion.db
 import com.dprk.infokids51.apatiti.ApatitiSectionActivity
 import com.dprk.infokids51.kirovsk.KirovskSectionActivity
 import com.dprk.infokids51.monchegorsk.MonchegorskSectionActivity
@@ -24,10 +25,6 @@ class MenuActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
-        //init db
-        DbHandler = DatabaseHelper(this)
 
         requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         setContentView(R.layout.activity_menu)
@@ -75,7 +72,7 @@ class MenuActivity : AppCompatActivity() {
              var key : Int= 125
              var name = ""
              var email = ""
-             val cursor = MainActivity.mDb.rawQuery("SELECT * FROM testtable;", null)
+             val cursor = db.rawQuery("SELECT * FROM testtable;", null)
              cursor.moveToFirst()
              while (!cursor.isAfterLast){
                  key = cursor.getInt(cursor.getColumnIndex("KEY_id"))

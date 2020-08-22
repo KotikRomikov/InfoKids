@@ -14,23 +14,20 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         var MenuButtonID: Long = 0
-        lateinit var mDb :SQLiteDatabase
+        lateinit var db : SQLiteDatabase
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //DatabaseHelper(this).testing()
-        val mDBHelper = DatabaseHelper(this)
-
         try {
-            mDBHelper.copyDB()
+            DatabaseHelper(this).start()
         } catch (mIOException: IOException) {
             throw Error("UnableToUpdateDatabase")
         }
 
         try {
-            mDb = mDBHelper.writableDatabase
+            db = DatabaseHelper(this).readableDatabase
         } catch (mSQLException: SQLException) {
             throw mSQLException
         }
