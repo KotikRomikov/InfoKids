@@ -1,7 +1,6 @@
 package com.dprk.infokids51
 
 import android.content.Context
-import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
@@ -11,16 +10,29 @@ import java.io.*
 class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, null, DB_VERSION){
 
     companion object {
-        val DB_NAME = "info.db"
-        val DB_VERSION = 2
+        const val DB_NAME = "info.db"
+        const val DB_VERSION = 1
     }
 
-    var DB_PATH = context.applicationInfo.dataDir + "/databases/"
-
-
-    var mNeedUpdate = false
-    var mDataBase: SQLiteDatabase? = null
+    private val DB_PATH = context.applicationInfo.dataDir + "/databases/"
+    private var mDataBase: SQLiteDatabase? = null
     private var mContext = context
+
+    fun start(){
+        if (File(DB_PATH+DB_NAME).exists()) {
+            Log.d("TEST", "File $DB_NAME EXISTS")
+        }
+        else{
+            Log.d("TEST", "File $DB_NAME NOT EXISTS")
+            this.readableDatabase
+            this.close()
+            try {
+                copyDBFile()
+            } catch (mIOException: IOException) {
+                throw Error("ErrorCopyingDataBase")
+            }
+        }
+    }
 
     //Копирование БД из папки assets на устройство
     @Throws(IOException::class)
@@ -35,15 +47,6 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
         mOutput.flush()
         mOutput.close()
         mInput.close()
-    }
-
-    //тестовое открытие БД
-    @Throws(SQLException::class)
-    fun openDataBase(): Boolean {
-        Log.d("OPEN BASE", "START")
-        mDataBase =
-            SQLiteDatabase.openDatabase(DB_PATH + DB_NAME, null, SQLiteDatabase.OPEN_READONLY)
-        return mDataBase != null
     }
 
     //Обязательная функция
@@ -73,20 +76,15 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
         super.close()
     }
 
-    fun start(){
-        if (File(DB_PATH+DB_NAME).exists()) {
-            Log.d("TEST", "File $DB_NAME EXISTS")
-        }
-        else{
-            Log.d("TEST", "File $DB_NAME NOT EXISTS")
-            this.readableDatabase
-            this.close()
-            try {
-                copyDBFile()
-            } catch (mIOException: IOException) {
-                throw Error("ErrorCopyingDataBase")
-            }
-        }
+    /*
+    тестовое открытие БД
+    @Throws(SQLException::class)
+    fun openDataBase(): Boolean {
+    Log.d("OPEN BASE", "START")
+    mDataBase =
+    SQLiteDatabase.openDatabase(DB_PATH + DB_NAME, null, SQLiteDatabase.OPEN_READONLY)
+    return mDataBase != null
     }
+    */
 
 }

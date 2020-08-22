@@ -2,11 +2,8 @@ package com.dprk.infokids51
 
 import android.content.Intent
 import android.content.pm.ActivityInfo
-import android.database.Cursor
-import android.database.DatabaseErrorHandler
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.dprk.infokids51.MainActivity.Companion.MenuButtonID
 import com.dprk.infokids51.MainActivity.Companion.db
@@ -21,7 +18,6 @@ import kotlinx.android.synthetic.main.activity_menu.*
 
 
 class MenuActivity : AppCompatActivity() {
-    var DbHandler : DatabaseHelper? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,9 +65,9 @@ class MenuActivity : AppCompatActivity() {
 
          KandalakshaRazdel.setOnClickListener {
 
-             var key : Int= 125
-             var name = ""
-             var email = ""
+             var key : Int
+             var name: String
+             var email: String
              val cursor = db.rawQuery("SELECT * FROM testtable;", null)
              cursor.moveToFirst()
              while (!cursor.isAfterLast){
@@ -82,11 +78,9 @@ class MenuActivity : AppCompatActivity() {
                  Log.d("CURSOR", "KEY_id = $key")
                  Log.d("CURSOR", "NAME = $name")
                  Log.d("CURSOR", "EMAIL = $email")
-
              }
              cursor.close()
 
-             //Toast.makeText(this, "${MenuButtonID}", Toast.LENGTH_SHORT).show()
              val numm: Long = MenuButtonID + KandalakshaRazdel.id.toLong()
              when {
                  numm == 4262461469 -> {
