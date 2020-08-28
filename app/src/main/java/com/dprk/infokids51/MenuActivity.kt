@@ -64,26 +64,42 @@ class MenuActivity : AppCompatActivity() {
         }
 
          KandalakshaRazdel.setOnClickListener {
+             //тут должна быть переменная что-то вроде city:String = "KND", для динамического SQL запроса
+             //тут должен быть объявлен массив для ресайкла val list = ArrayList<ListItem>()
 
              var key : Int
              var name: String
              var email: String
-             val cursor = db.rawQuery("SELECT * FROM testtable;", null)
-             cursor.moveToFirst()
+             val cursor = db.rawQuery("SELECT * FROM testtable;", null) // запрашиваем данные из таблицы через SQL запрос, должен быть динамический!
+             cursor.moveToFirst() //перемещаем курсор (таблицу) с результатами в начало
              while (!cursor.isAfterLast){
                  key = cursor.getInt(cursor.getColumnIndex("KEY_id"))
                  name = cursor.getString(cursor.getColumnIndex("NAME"))
                  email = cursor.getString(cursor.getColumnIndex("EMAIL"))
-                 cursor.moveToNext()
+                 /*
+                 тут можно заполнять массив для ресайкла данными
+                 list.add(
+                 ListItem(
+                 R.drawable.ic_baseline_add_circle_24,
+                 "Заголовок",
+                 "всякая чушая",
+                 "+91134567",
+                 "https://vk.com/minzdrav_51"
+                 )
+                 )
+                 */
+                 cursor.moveToNext()//переходим на следующую строку в таблице
+                 //пишем в лог консоли, что получили на каждой строке
                  Log.d("CURSOR", "KEY_id = $key")
                  Log.d("CURSOR", "NAME = $name")
                  Log.d("CURSOR", "EMAIL = $email")
              }
-             cursor.close()
+             cursor.close()//обязательно закрываем курсор
 
+             // Этот код по идее нам больше не нужен, кроме вызова интента
              val numm: Long = MenuButtonID + KandalakshaRazdel.id.toLong()
-             when {
-                 numm == 4262461469 -> {
+             when (numm) {
+                 4262461469 -> {
                      val kandalakshaSectionIntent = Intent(this, TestActivity::class.java)
                      startActivity(kandalakshaSectionIntent)
                  }
