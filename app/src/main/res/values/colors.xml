@@ -2,4 +2,7 @@
 <resources>
     <color name="colorPrimary">#974FA5</color>
     <color name="colorPrimaryDark">#58339A</color>
+    <color name="testTextColor">#003366</color>
+    <color name="testBackTint">#FF6600</color>
+    <color name="testStrokeColor">#FFCC00</color>
 </resources>

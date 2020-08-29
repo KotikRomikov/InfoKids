@@ -5,7 +5,6 @@ import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.dprk.infokids51.MainActivity.Companion.MenuButtonID
 import com.dprk.infokids51.MainActivity.Companion.db
 import com.dprk.infokids51.apatiti.ApatitiSectionActivity
 import com.dprk.infokids51.kirovsk.KirovskSectionActivity
@@ -96,16 +95,8 @@ class MenuActivity : AppCompatActivity() {
              }
              cursor.close()//обязательно закрываем курсор
 
-             // Этот код по идее нам больше не нужен, кроме вызова интента
-             val numm: Long = MenuButtonID + KandalakshaRazdel.id.toLong()
-             when (numm) {
-                 4262461469 -> {
-                     val kandalakshaSectionIntent = Intent(this, TestActivity::class.java)
-                     startActivity(kandalakshaSectionIntent)
-                 }
-             }
-//             val kandalakshaSectionIntent = Intent(this, KandalakshaSectionActivity::class.java)
-//            startActivity(kandalakshaSectionIntent)
+             val kandalakshaSectionIntent = Intent(this, TestActivity::class.java)
+             startActivity(kandalakshaSectionIntent)
          }
 
     }

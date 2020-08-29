@@ -13,19 +13,20 @@ import java.io.IOException
 class MainActivity : AppCompatActivity() {
 
     companion object {
-        var MenuButtonID: Long = 0
         lateinit var db : SQLiteDatabase
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        //Запускаем обновление БД если это необходимо
         try {
             DatabaseHelper(this).start()
         } catch (mIOException: IOException) {
             throw Error("UnableToUpdateDatabase")
         }
 
+        //подключаемся к БД в жежиме чтения
         try {
             db = DatabaseHelper(this).readableDatabase
         } catch (mSQLException: SQLException) {
@@ -39,14 +40,8 @@ class MainActivity : AppCompatActivity() {
 
 
         MenuButton.setOnClickListener {
-            MenuButtonID = MenuButton.id.toLong()
-
-
-            //Toast.makeText(this, "$MenuButtonID", Toast.LENGTH_SHORT).show()
             val menuIntent = Intent(this, MenuActivity::class.java)
             startActivity(menuIntent)
-//             val testIntent = Intent(this, TestActivity::class.java)
-//             startActivity(testIntent)
         }
     }
 }
