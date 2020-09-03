@@ -14,21 +14,11 @@ class TestActivity : AppCompatActivity() {
 
         list.add(
             ListItem(
-                R.drawable.ic_baseline_add_circle_24,
-                "Заголовок",
-                "всякая чушая",
-                "+91134567",
-                "https://vk.com/minzdrav_51"
-            )
-        )
-        list.add(
-            ListItem(
-                R.drawable.ic_baseline_add_circle_24,
-                "Заголовок2",
-                "всякая чушая2",
-                "+9113456745",
-                "https://vk.com/minzdrav_51"
-            )
+                "INFO KIDS",
+                "infokids@gmail.com",
+                "+7 (911) 801-11-11",
+                "https://vk.com",
+                "184049 Кандалакша, Защитников Заполярья, 5а 15")
         )
 
         rec_view.hasFixedSize()

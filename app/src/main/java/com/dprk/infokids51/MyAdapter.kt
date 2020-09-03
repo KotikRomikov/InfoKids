@@ -4,7 +4,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
@@ -17,23 +16,22 @@ class MyAdapter(listArray: ArrayList<ListItem>, context: Context) :
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        val titleText = view.findViewById<TextView>(R.id.titleText)
-        val contentText = view.findViewById<TextView>(R.id.contentText)
-        val image_id = view.findViewById<ImageView>(R.id.image_id)
-        val telNumber = view.findViewById<TextView>(R.id.telNumber)
-        val linkVK = view.findViewById<TextView>(R.id.linkVK)
+        val locateCompany = view.findViewById<TextView>(R.id.locationCompany)
+        val nameCompany = view.findViewById<TextView>(R.id.nameCompany)
+        val emailCompany = view.findViewById<TextView>(R.id.emailCompany)
+        val telNumber = view.findViewById<TextView>(R.id.telCompany)
+        val webLink = view.findViewById<TextView>(R.id.webCompany)
 
 
         fun bind(listItem: ListItem, context: Context) {
-            titleText.text = listItem.titleText
-            contentText.text = listItem.contentText
-            image_id.setImageResource(listItem.image_id)
-            telNumber.text = listItem.telNumber
-            linkVK.text = listItem.linkVK
-            itemView.setOnClickListener() {
-                Toast.makeText(context, "Pressed: ${titleText.text}", Toast.LENGTH_SHORT).show()
-            }
-
+            nameCompany.text = listItem.nameCompany
+            emailCompany.text = listItem.emailCompany
+            telNumber.text = listItem.telCompany
+            webLink.text = listItem.webCompany
+            locateCompany.text = listItem.locateCompany
+//            itemView.setOnClickListener() {
+//                Toast.makeText(context, "Pressed: ${nameCompany.text}", Toast.LENGTH_SHORT).show()
+//            }
 
         }
 
