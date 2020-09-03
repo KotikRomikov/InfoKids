@@ -20,6 +20,38 @@ class TestActivity : AppCompatActivity() {
                 "https://vk.com",
                 "184049 Кандалакша, Защитников Заполярья, 5а 15")
         )
+        list.add(
+            ListItem(
+                "Поликлиническое отделение ГБУЗ Кандалакшское ЦРБ, детская поликлиника",
+                "infokids@gmail.com",
+                "+7 (911) 801-11-11",
+                "https://vk.com",
+                "184049 Кандалакша, Первомайская 79А")
+        )
+        list.add(
+            ListItem(
+                "INFO KIDS",
+                "infokids@gmail.com",
+                "+7 (911) 801-11-11",
+                "https://vk.com",
+                "184049 Кандалакша, Защитников Заполярья, 5а 15")
+        )
+        list.add(
+            ListItem(
+                "INFO KIDS",
+                "infokids@gmail.com",
+                "+7 (911) 801-11-11",
+                "https://vk.com",
+                "184049 Кандалакша, Защитников Заполярья, 5а 15")
+        )
+        list.add(
+            ListItem(
+                "INFO KIDS",
+                "infokids@gmail.com",
+                "+7 (911) 801-11-11",
+                "https://vk.com",
+                "184049 Кандалакша, Защитников Заполярья, 5а 15")
+        )
 
         rec_view.hasFixedSize()
         rec_view.layoutManager = LinearLayoutManager(this)

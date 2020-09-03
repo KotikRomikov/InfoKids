@@ -281,6 +281,10 @@
         <activity android:name=".apatiti.hobby.ApatitiHobbyChoreographyActivity" />
         <activity android:name=".apatiti.hobby.ApatitiHobbyArtWorkActivity" />
         <activity android:name=".apatiti.hobby.ApatitiHobbyLanguagesActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

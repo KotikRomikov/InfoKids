@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp">
-
     <RelativeLayout
         android:id="@+id/relative"
         android:layout_width="match_parent"
@@ -13,22 +12,28 @@
         android:background="@drawable/item_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/testStyle">
 
         <TextView
             android:id="@+id/nameCompany"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
+            android:layout_above="@+id/emailCompany"
+            android:layout_alignParentStart="false"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
             android:autoLink="none"
+            android:fontFamily="@font/roboto_condensed_bold"
             android:text="INFO KIDS"
             android:textAlignment="viewEnd"
-            android:textSize="30sp" />
+            android:textAllCaps="true"
+            android:textSize="30sp"
+            android:typeface="normal" />
 
         <TextView
             android:id="@+id/locationCompany"
@@ -41,8 +46,9 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
             android:autoLink="map"
+            android:fontFamily="@font/roboto_condensed_regular"
             android:text="184049 Кандалакша, ул. Защитников Заполярья 5а 15"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/webCompany"
@@ -50,13 +56,16 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/locationCompany"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentEnd="false"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="4dp"
             android:autoLink="web"
+            android:fontFamily="@font/roboto_condensed_regular"
             android:text="https://vk.com"
-            android:textSize="16sp"/>
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/telCompany"
@@ -64,13 +73,15 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/webCompany"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentEnd="false"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="4dp"
             android:autoLink="phone"
+            android:fontFamily="@font/roboto_condensed_regular"
             android:text="+7 (911) 801-11-11"
-            android:textSize="16sp"/>
+            android:textAllCaps="false"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/emailCompany"
@@ -78,12 +89,15 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/telCompany"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentEnd="false"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="4dp"
             android:autoLink="email"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:includeFontPadding="false"
             android:text="infokids@mail.ru"
+            android:textColor="@color/testTextColor"
             android:textSize="16sp" />
 
     </RelativeLayout>
