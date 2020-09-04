@@ -15,7 +15,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <LinearLayout
+            android:id="@+id/liner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -68,7 +70,70 @@
                 android:layout_height="wrap_content"
                 android:text="Кандалакша" />
 
-        </LinearLayout>
-    </ScrollView>
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/selected"
+                android:fontFamily="@font/roboto_condensed_regular"
+                android:text="Кандалакша"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/testTextColor"
+                android:textSize="24sp" />
 
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/selected"
+                android:fontFamily="@font/roboto_condensed_regular"
+                android:text="Апатиты"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/testTextColor"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/selected"
+                android:fontFamily="@font/roboto_condensed_regular"
+                android:text="Мурманск"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/testTextColor"
+                android:textSize="24sp"/>
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/selected"
+                android:fontFamily="@font/roboto_condensed_regular"
+                android:text="Алакуртти"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/testTextColor"
+                android:textSize="24sp"/>
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/selected"
+                android:fontFamily="@font/roboto_condensed_regular"
+                android:text="Масса других городов"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/testTextColor"
+                android:textSize="24sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

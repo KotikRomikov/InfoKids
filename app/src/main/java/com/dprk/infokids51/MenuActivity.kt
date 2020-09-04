@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.dprk.infokids51.MainActivity.Companion.db
 import com.dprk.infokids51.apatiti.ApatitiSectionActivity
@@ -98,6 +99,11 @@ class MenuActivity : AppCompatActivity() {
              val kandalakshaSectionIntent = Intent(this, TestActivity::class.java)
              startActivity(kandalakshaSectionIntent)
          }
+
+        textView.setOnClickListener {
+            val kandalakshaSectionIntent = Intent(this, TestActivity::class.java)
+            startActivity(kandalakshaSectionIntent)
+        }
 
     }
 }

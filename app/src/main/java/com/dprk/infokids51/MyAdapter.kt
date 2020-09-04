@@ -52,14 +52,4 @@ class MyAdapter(listArray: ArrayList<ListItem>, context: Context) :
         val listItem = listArrayR[position]
         holder.bind(listItem, contextR)
     }
-
-//    fun infoDialog() {
-//        MaterialAlertDialogBuilder(contextR)
-//            .setMessage(listItem)
-//            .setPositiveButton(resources.getString(R.string.accept)) { _, _ ->
-//                // Respond to positive button press
-//                finish()
-//            }
-//            .show()
-//    }
 }
