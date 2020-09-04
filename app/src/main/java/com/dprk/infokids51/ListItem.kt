@@ -5,7 +5,8 @@ data class ListItem(
     var emailCompany: String,
     var telCompany: String,
     var webCompany: String,
-    var locateCompany: String
+    var locateCompany: String,
+    var infoCompany: String = "no info"
 )
 
 
