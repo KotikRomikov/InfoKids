@@ -1,6 +1,7 @@
 package com.dprk.infokids51
 
 import android.content.Context
+import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
@@ -11,7 +12,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
 
     companion object {
         const val DB_NAME = "info.db"
-        const val DB_VERSION = 1
+        const val DB_VERSION = 7
     }
 
     private val DB_PATH = context.applicationInfo.dataDir + "/databases/"
@@ -21,10 +22,11 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
     fun start(){
         if (File(DB_PATH+DB_NAME).exists()) {
             Log.d("TEST", "File $DB_NAME EXISTS")
+
         }
         else{
             Log.d("TEST", "File $DB_NAME NOT EXISTS")
-            this.readableDatabase
+            this.writableDatabase
             this.close()
             try {
                 copyDBFile()
@@ -76,15 +78,14 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
         super.close()
     }
 
-    /*
-    тестовое открытие БД
+
+    //тестовое открытие БД
     @Throws(SQLException::class)
     fun openDataBase(): Boolean {
     Log.d("OPEN BASE", "START")
     mDataBase =
-    SQLiteDatabase.openDatabase(DB_PATH + DB_NAME, null, SQLiteDatabase.OPEN_READONLY)
+    SQLiteDatabase.openDatabase(DB_PATH + DB_NAME, null, SQLiteDatabase.OPEN_READWRITE)
     return mDataBase != null
     }
-    */
 
 }

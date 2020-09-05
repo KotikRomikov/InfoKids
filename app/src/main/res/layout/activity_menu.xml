@@ -94,7 +94,7 @@
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -107,7 +107,8 @@
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
+
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
@@ -119,7 +120,8 @@
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
+
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
@@ -131,7 +133,7 @@
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
 
         </LinearLayout>
 

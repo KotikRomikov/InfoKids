@@ -3,55 +3,13 @@ package com.dprk.infokids51
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.dprk.infokids51.MenuActivity.Companion.list
 import kotlinx.android.synthetic.main.activity_test.*
 
 class TestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test)
-
-        val list = ArrayList<ListItem>()
-
-        list.add(
-            ListItem(
-                "INFO KIDS",
-                "infokids@gmail.com",
-                "+7 (911) 801-11-11",
-                "https://vk.com",
-                "184049 Кандалакша, Защитников Заполярья, 5а 15")
-        )
-        list.add(
-            ListItem(
-                "Поликлиническое отделение ГБУЗ Кандалакшское ЦРБ, детская поликлиника",
-                "infokids@gmail.com",
-                "+7 (911) 801-11-11",
-                "https://vk.com",
-                "184049 Кандалакша, Первомайская 79А")
-        )
-        list.add(
-            ListItem(
-                "INFO KIDS",
-                "infokids@gmail.com",
-                "+7 (911) 801-11-11",
-                "https://vk.com",
-                "184049 Кандалакша, Защитников Заполярья, 5а 15")
-        )
-        list.add(
-            ListItem(
-                "INFO KIDS",
-                "infokids@gmail.com",
-                "+7 (911) 801-11-11",
-                "https://vk.com",
-                "184049 Кандалакша, Защитников Заполярья, 5а 15")
-        )
-        list.add(
-            ListItem(
-                "INFO KIDS",
-                "infokids@gmail.com",
-                "+7 (911) 801-11-11",
-                "https://vk.com",
-                "184049 Кандалакша, Защитников Заполярья, 5а 15")
-        )
 
         rec_view.hasFixedSize()
         rec_view.layoutManager = LinearLayoutManager(this)

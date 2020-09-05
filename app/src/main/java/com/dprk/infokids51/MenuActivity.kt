@@ -14,10 +14,15 @@ import com.dprk.infokids51.murmansk.MurmanskSectionActivity
 import com.dprk.infokids51.olenegorsk.OlenegorskSectionActivity
 import com.dprk.infokids51.severomorsk.SeveromorskSectionActivity
 import com.dprk.infokids51.zori.ZoriSectionActivity
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_menu.*
 
 
 class MenuActivity : AppCompatActivity() {
+
+    companion object{
+        val list = ArrayList<ListItem>()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,30 +72,31 @@ class MenuActivity : AppCompatActivity() {
              //тут должна быть переменная что-то вроде city:String = "KND", для динамического SQL запроса
              //тут должен быть объявлен массив для ресайкла val list = ArrayList<ListItem>()
 
-             var key : Int
              var name: String
              var email: String
-             val cursor = db.rawQuery("SELECT * FROM testtable;", null) // запрашиваем данные из таблицы через SQL запрос, должен быть динамический!
+             var tel: String
+             var web: String
+             var locate: String
+             var info: String
+
+
+             val cursor = db.rawQuery("SELECT * FROM info WHERE city='KND';", null) // запрашиваем данные из таблицы через SQL запрос, должен быть динамический!
              cursor.moveToFirst() //перемещаем курсор (таблицу) с результатами в начало
              while (!cursor.isAfterLast){
-                 key = cursor.getInt(cursor.getColumnIndex("KEY_id"))
-                 name = cursor.getString(cursor.getColumnIndex("NAME"))
-                 email = cursor.getString(cursor.getColumnIndex("EMAIL"))
-                 /*
-                 тут можно заполнять массив для ресайкла данными
+                 name = cursor.getString(cursor.getColumnIndex("name"))
+                 email = cursor.getString(cursor.getColumnIndex("email"))
+                 tel=cursor.getString(cursor.getColumnIndex("tel"))
+                 web=cursor.getString(cursor.getColumnIndex("web"))
+                 locate = cursor.getString(cursor.getColumnIndex("locate"))
+                 info = cursor.getString(cursor.getColumnIndex("info"))
+
                  list.add(
-                 ListItem(
-                 R.drawable.ic_baseline_add_circle_24,
-                 "Заголовок",
-                 "всякая чушая",
-                 "+91134567",
-                 "https://vk.com/minzdrav_51"
+                     ListItem(name, email, tel, web, locate, info)
                  )
-                 )
-                 */
+
                  cursor.moveToNext()//переходим на следующую строку в таблице
                  //пишем в лог консоли, что получили на каждой строке
-                 Log.d("CURSOR", "KEY_id = $key")
+                 Log.d("CURSOR", "TEL = $tel")
                  Log.d("CURSOR", "NAME = $name")
                  Log.d("CURSOR", "EMAIL = $email")
              }
