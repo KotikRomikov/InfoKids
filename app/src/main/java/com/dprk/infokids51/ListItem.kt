@@ -9,4 +9,8 @@ data class ListItem(
     var infoCompany: String = "no info"
 )
 
+data class PartItem(
+    var namePart : String = "nothing"
+)
+
 

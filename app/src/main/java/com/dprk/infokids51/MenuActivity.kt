@@ -98,11 +98,11 @@ class MenuActivity : AppCompatActivity() {
              }
              cursor.close()//обязательно закрываем курсор
 
-             val kandalakshaSectionIntent = Intent(this, TestActivity::class.java)
-             startActivity(kandalakshaSectionIntent)
+             val RecActivity = Intent(this, TestActivity::class.java)
+             startActivity(RecActivity)
          }
 
-        `@+id/tvMRM`.setOnClickListener {
+        textView.setOnClickListener {
             val kandalakshaSectionIntent = Intent(this, TestActivity::class.java)
             startActivity(kandalakshaSectionIntent)
         }
