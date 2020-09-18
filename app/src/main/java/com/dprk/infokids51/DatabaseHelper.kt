@@ -12,21 +12,21 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
 
     companion object {
         const val DB_NAME = "info.db"
-        const val DB_VERSION = 7
+        const val DB_VERSION = 6
     }
 
-    private val DB_PATH = context.applicationInfo.dataDir + "/databases/"
+    private val DB_PATH = context.filesDir.path + "/"
     private var mDataBase: SQLiteDatabase? = null
     private var mContext = context
 
     fun start(){
         if (File(DB_PATH+DB_NAME).exists()) {
-            Log.d("TEST", "File $DB_NAME EXISTS")
+            Log.d("TEST", "File ${DB_PATH+DB_NAME} EXISTS")
 
         }
         else{
-            Log.d("TEST", "File $DB_NAME NOT EXISTS")
-            this.writableDatabase
+            Log.d("TEST", "File ${DB_PATH+DB_NAME} NOT EXISTS")
+            //this.readableDatabase
             this.close()
             try {
                 copyDBFile()
@@ -41,14 +41,17 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
     private fun copyDBFile() {
         Log.d("COPY FILE BASE", "START")
         val mInput: InputStream = mContext.assets.open(DB_NAME)
+        Log.d("COPY FILE BASE", "INPUT STREAM")
         //InputStream mInput = mContext.getResources().openRawResource(R.raw.info);
         val mOutput: OutputStream = FileOutputStream(DB_PATH + DB_NAME)
+        Log.d("COPY FILE BASE", "OUTPUT STREAM")
         val mBuffer = ByteArray(1024)
         var mLength: Int
         while (mInput.read(mBuffer).also { mLength = it } > 0) mOutput.write(mBuffer, 0, mLength)
         mOutput.flush()
         mOutput.close()
         mInput.close()
+        Log.d("COPY FILE BASE", "FINISH")
     }
 
     //Обязательная функция
@@ -60,8 +63,8 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
         if (oldVersion < DB_VERSION) {
             val dbFile = File(DB_PATH + DB_NAME)
             if (dbFile.exists()) {
-                dbFile.delete()
-                Log.d("UPDATE DB", "DELETE OLD DB")
+                //dbFile.delete()
+                //Log.d("UPDATE DB", "DELETE OLD DB")
                 try {
                     copyDBFile()
                 } catch (mIOException: IOException) {

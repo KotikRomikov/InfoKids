@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         //подключаемся к БД в жежиме чтения
         try {
-            db = DatabaseHelper(this).readableDatabase
+            db = SQLiteDatabase.openDatabase(this.filesDir.path + "/info.db", null, SQLiteDatabase.OPEN_READONLY)
         } catch (mSQLException: SQLException) {
             throw mSQLException
         }
@@ -44,4 +44,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(menuIntent)
         }
     }
+
+
 }

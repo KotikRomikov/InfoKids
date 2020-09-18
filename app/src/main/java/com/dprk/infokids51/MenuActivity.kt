@@ -110,6 +110,5 @@ class MenuActivity : AppCompatActivity() {
             val kandalakshaSectionIntent = Intent(this, TestActivity::class.java)
             startActivity(kandalakshaSectionIntent)
         }
-
     }
 }

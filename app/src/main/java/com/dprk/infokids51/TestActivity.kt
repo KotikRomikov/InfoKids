@@ -16,4 +16,9 @@ class TestActivity : AppCompatActivity() {
 
         rec_view.adapter = MyAdapter(list, this)
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        list.clear()
+    }
 }
