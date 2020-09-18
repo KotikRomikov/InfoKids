@@ -6,12 +6,6 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.dprk.infokids51.MainActivity.Companion.db
-import com.dprk.infokids51.apatiti.ApatitiSectionActivity
-import com.dprk.infokids51.kirovsk.KirovskSectionActivity
-import com.dprk.infokids51.monchegorsk.MonchegorskSectionActivity
-import com.dprk.infokids51.olenegorsk.OlenegorskSectionActivity
-import com.dprk.infokids51.severomorsk.SeveromorskSectionActivity
-import com.dprk.infokids51.zori.ZoriSectionActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -27,7 +21,7 @@ class MenuActivity : AppCompatActivity() {
         requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         setContentView(R.layout.activity_menu)
 
-         tvKND.setOnClickListener {
+         tvMRM.setOnClickListener {
              //тут должна быть переменная что-то вроде city:String = "KND", для динамического SQL запроса
              //тут должен быть объявлен массив для ресайкла val list = ArrayList<ListItem>()
 

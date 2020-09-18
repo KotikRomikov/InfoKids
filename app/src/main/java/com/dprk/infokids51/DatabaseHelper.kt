@@ -12,7 +12,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
 
     companion object {
         const val DB_NAME = "info.db"
-        const val DB_VERSION = 6
+        const val DB_VERSION = 7
     }
 
     private val DB_PATH = context.filesDir.path + "/"
