@@ -12,6 +12,7 @@ import com.dprk.infokids51.monchegorsk.MonchegorskSectionActivity
 import com.dprk.infokids51.olenegorsk.OlenegorskSectionActivity
 import com.dprk.infokids51.severomorsk.SeveromorskSectionActivity
 import com.dprk.infokids51.zori.ZoriSectionActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MenuActivity : AppCompatActivity() {
@@ -26,45 +27,7 @@ class MenuActivity : AppCompatActivity() {
         requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         setContentView(R.layout.activity_menu)
 
-        MurmanskRazdel.setOnClickListener {
-            val murmanskRazdelIntent = Intent(
-                this,
-                MainRazdelActivity::class.java
-            )
-            startActivity(murmanskRazdelIntent)
-        }
-
-         SeveromorskRazdel.setOnClickListener {
-            val severomorskSectionIntent = Intent(this, SeveromorskSectionActivity::class.java)
-            startActivity(severomorskSectionIntent)
-        }
-
-         OlenegorskRazdel.setOnClickListener {
-            val olenegorskSectionIntent = Intent(this, OlenegorskSectionActivity::class.java)
-            startActivity(olenegorskSectionIntent)
-        }
-
-         MonchegorskRazdel.setOnClickListener {
-            val monchegorskSectionIntent = Intent(this, MonchegorskSectionActivity::class.java)
-            startActivity(monchegorskSectionIntent)
-        }
-
-         ApatitiRazdel.setOnClickListener {
-            val apatitiSectionIntent = Intent(this, ApatitiSectionActivity::class.java)
-            startActivity(apatitiSectionIntent)
-        }
-
-         KirovskRazdel.setOnClickListener {
-            val kirovskSectionIntent = Intent(this, KirovskSectionActivity::class.java)
-            startActivity(kirovskSectionIntent)
-        }
-
-         ZoriRazdel.setOnClickListener {
-            val zoriSectionIntent = Intent(this, ZoriSectionActivity::class.java)
-            startActivity(zoriSectionIntent)
-        }
-
-         KandalakshaRazdel.setOnClickListener {
+         tvKND.setOnClickListener {
              //тут должна быть переменная что-то вроде city:String = "KND", для динамического SQL запроса
              //тут должен быть объявлен массив для ресайкла val list = ArrayList<ListItem>()
 
@@ -102,9 +65,5 @@ class MenuActivity : AppCompatActivity() {
              startActivity(RecActivity)
          }
 
-        textView.setOnClickListener {
-            val kandalakshaSectionIntent = Intent(this, TestActivity::class.java)
-            startActivity(kandalakshaSectionIntent)
-        }
     }
 }

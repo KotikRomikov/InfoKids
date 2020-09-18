@@ -10,6 +10,7 @@ class MainRazdelActivity : AppCompatActivity() {
 
     companion object {
         lateinit var mainRazdel: String
+        var listP = ArrayList<PartItem>()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +24,17 @@ class MainRazdelActivity : AppCompatActivity() {
         tvMed.setOnClickListener {
             mainRazdel = "MED"
 
+            var name : String
+
+            val cursor = MainActivity.db.rawQuery("SELECT * FROM part WHERE city = ${MainActivity.city};", null)
+            cursor.moveToFirst()
+            while (!cursor.isAfterLast){
+                name = cursor.getString(cursor.getColumnIndex("name"))
+
+                listP.add(
+                    PartItem(name)
+                )
+            }
             startActivity(RecActivity)
         }
         tvRelax.setOnClickListener {
