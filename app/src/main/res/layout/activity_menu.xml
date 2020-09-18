@@ -22,54 +22,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/MurmanskRazdel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Мурманск" />
-
-            <Button
-                android:id="@+id/SeveromorskRazdel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Североморск" />
-
-            <Button
-                android:id="@+id/OlenegorskRazdel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Оленегорск" />
-
-            <Button
-                android:id="@+id/MonchegorskRazdel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Мончегорск" />
-
-            <Button
-                android:id="@+id/KirovskRazdel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Кировск" />
-
-            <Button
-                android:id="@+id/ApatitiRazdel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Апатиты" />
-
-            <Button
-                android:id="@+id/ZoriRazdel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Полярные Зори" />
-
-            <Button
-                android:id="@+id/KandalakshaRazdel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Кандалакша" />
-
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
