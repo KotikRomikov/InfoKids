@@ -4,18 +4,14 @@ import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.util.Log
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.dprk.infokids51.MainActivity.Companion.db
 import com.dprk.infokids51.apatiti.ApatitiSectionActivity
 import com.dprk.infokids51.kirovsk.KirovskSectionActivity
 import com.dprk.infokids51.monchegorsk.MonchegorskSectionActivity
-import com.dprk.infokids51.murmansk.MurmanskSectionActivity
 import com.dprk.infokids51.olenegorsk.OlenegorskSectionActivity
 import com.dprk.infokids51.severomorsk.SeveromorskSectionActivity
 import com.dprk.infokids51.zori.ZoriSectionActivity
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_menu.*
 
 
 class MenuActivity : AppCompatActivity() {
@@ -33,7 +29,7 @@ class MenuActivity : AppCompatActivity() {
         MurmanskRazdel.setOnClickListener {
             val murmanskRazdelIntent = Intent(
                 this,
-                MurmanskSectionActivity::class.java
+                MainRazdelActivity::class.java
             )
             startActivity(murmanskRazdelIntent)
         }
@@ -106,7 +102,7 @@ class MenuActivity : AppCompatActivity() {
              startActivity(kandalakshaSectionIntent)
          }
 
-        textView.setOnClickListener {
+        `@+id/tvMRM`.setOnClickListener {
             val kandalakshaSectionIntent = Intent(this, TestActivity::class.java)
             startActivity(kandalakshaSectionIntent)
         }

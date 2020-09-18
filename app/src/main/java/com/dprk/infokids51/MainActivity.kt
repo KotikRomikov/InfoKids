@@ -13,7 +13,8 @@ import java.io.IOException
 class MainActivity : AppCompatActivity() {
 
     companion object {
-        lateinit var db : SQLiteDatabase
+        lateinit var db: SQLiteDatabase
+        lateinit var city: String
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +29,11 @@ class MainActivity : AppCompatActivity() {
 
         //подключаемся к БД в жежиме чтения
         try {
-            db = SQLiteDatabase.openDatabase(this.filesDir.path + "/info.db", null, SQLiteDatabase.OPEN_READONLY)
+            db = SQLiteDatabase.openDatabase(
+                this.filesDir.path + "/info.db",
+                null,
+                SQLiteDatabase.OPEN_READONLY
+            )
         } catch (mSQLException: SQLException) {
             throw mSQLException
         }
@@ -36,11 +41,39 @@ class MainActivity : AppCompatActivity() {
         requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         setContentView(R.layout.activity_main)
 
-        // testActivity
+        val menuIntent = Intent(this, MainRazdelActivity::class.java)
 
+        tvMRM.setOnClickListener {
+            city = "MRM"
+            startActivity(menuIntent)
+        }
 
-        MenuButton.setOnClickListener {
-            val menuIntent = Intent(this, MenuActivity::class.java)
+        tvSVR.setOnClickListener {
+            city = "SVR"
+            startActivity(menuIntent)
+        }
+        tvLNG.setOnClickListener {
+            city = "LNG"
+            startActivity(menuIntent)
+        }
+        tvMNC.setOnClickListener {
+            city = "MNC"
+            startActivity(menuIntent)
+        }
+        tvKRV.setOnClickListener {
+            city = "KRV"
+            startActivity(menuIntent)
+        }
+        tvPTT.setOnClickListener {
+            city = "PTT"
+            startActivity(menuIntent)
+        }
+        tvPLR.setOnClickListener {
+            city = "PLR"
+            startActivity(menuIntent)
+        }
+        tvKND.setOnClickListener {
+            city = "KND"
             startActivity(menuIntent)
         }
     }

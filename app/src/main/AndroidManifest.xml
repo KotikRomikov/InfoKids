@@ -255,7 +255,7 @@
         <activity android:name=".kandalaksha.KandalakshaSectionActivity" />
         <activity android:name=".apatiti.ApatitiSectionActivity" />
         <activity android:name=".murmansk.MurmanskMedicalActivity" />
-        <activity android:name=".murmansk.MurmanskSectionActivity" />
+        <activity android:name=".MainRazdelActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action
