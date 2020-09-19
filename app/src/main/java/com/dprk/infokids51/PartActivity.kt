@@ -3,23 +3,22 @@ package com.dprk.infokids51
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.dprk.infokids51.MainRazdelActivity.Companion.list
+import com.dprk.infokids51.MainRazdelActivity.Companion.listP
 import kotlinx.android.synthetic.main.activity_test.*
 
-class TestActivity : AppCompatActivity() {
+class PartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_test)
+        setContentView(R.layout.razdel_item_layout)
 
         rec_view.hasFixedSize()
         rec_view.layoutManager = LinearLayoutManager(this)
 
-        rec_view.adapter = MyAdapter(list, this)
+        rec_view.adapter = AdapterPart(listP, this)
     }
 
     override fun onBackPressed() {
         super.onBackPressed()
-        list.clear()
+        listP.clear()
     }
 }
-

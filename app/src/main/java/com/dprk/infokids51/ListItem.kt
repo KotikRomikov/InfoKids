@@ -10,7 +10,7 @@ data class ListItem(
 )
 
 data class PartItem(
-    var namePart : String = "nothing"
+    var namePart : String
 )
 
 
