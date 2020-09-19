@@ -14,9 +14,9 @@ class MainRazdelActivity : AppCompatActivity() {
     companion object {
 
         val list = ArrayList<ListItem>()
+        var listP = ArrayList<PartItem>()
 
         lateinit var mainRazdel: String
-        var listP = ArrayList<PartItem>()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,11 +26,11 @@ class MainRazdelActivity : AppCompatActivity() {
 
         val RecActivity = Intent(this, PartActivity::class.java)
 
+        var name: String
+
 
         tvMed.setOnClickListener {
             mainRazdel = "MED"
-
-            var name: String
 
             val cursor = db.rawQuery("SELECT * FROM part;", null)
             cursor.moveToFirst()
