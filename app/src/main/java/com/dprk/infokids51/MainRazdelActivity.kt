@@ -31,7 +31,7 @@ class MainRazdelActivity : AppCompatActivity() {
             cursor.moveToFirst()
             while (!cursor.isAfterLast) {
                 name = cursor.getString(cursor.getColumnIndex("name"))
-                Log.d("test", "заполняем массив")
+                Log.d("test", "заполняем массив name = $name")
                 listP.add(PartItem(name))
                 cursor.moveToNext()//переходим на следующую строку в таблице
             }
