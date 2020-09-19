@@ -5,6 +5,7 @@ import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.dprk.infokids51.MainActivity.Companion.city
 import com.dprk.infokids51.MainActivity.Companion.db
 import kotlinx.android.synthetic.main.activity_main_razdel.*
 
@@ -31,7 +32,7 @@ class MainRazdelActivity : AppCompatActivity() {
         tvMed.setOnClickListener {
             mainRazdel = "MED"
 
-            val cursor = db.rawQuery("SELECT * FROM part;", null)
+            val cursor = db.rawQuery("SELECT * FROM part WHERE city='$city';", null)
             cursor.moveToFirst()
             while (!cursor.isAfterLast) {
                 name = cursor.getString(cursor.getColumnIndex("name"))

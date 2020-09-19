@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import androidx.core.content.ContextCompat.startActivity
+import com.dprk.infokids51.AdapterPart.Companion.namePartText
+import com.dprk.infokids51.MainActivity.Companion.city
 
 class TargetSQL(context: Context) {
 
@@ -23,7 +25,7 @@ class TargetSQL(context: Context) {
 
 
         val cursor = MainActivity.db.rawQuery(
-            "SELECT * FROM info WHERE city='KND';",
+            "SELECT * FROM info WHERE city='$city' AND part='$namePartText';",
             null
         ) // запрашиваем данные из таблицы через SQL запрос, должен быть динамический!
         cursor.moveToFirst() //перемещаем курсор (таблицу) с результатами в начало
@@ -48,7 +50,6 @@ class TargetSQL(context: Context) {
         cursor.close()//обязательно закрываем курсор
         val x = Intent(contextX, TestActivity::class.java)
         startActivity(context, x, null)
-
 
     }
 

@@ -47,7 +47,6 @@ class MainActivity : AppCompatActivity() {
             city = "MRM"
             startActivity(menuIntent)
         }
-
         tvSVR.setOnClickListener {
             city = "SVR"
             startActivity(menuIntent)
