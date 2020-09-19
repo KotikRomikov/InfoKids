@@ -12,12 +12,13 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
 
     companion object {
         const val DB_NAME = "info.db"
-        const val DB_VERSION = 10
+        const val DB_VERSION = 12
     }
 
     private val DB_PATH = context.filesDir.path + "/"
     private var mDataBase: SQLiteDatabase? = null
     private var mContext = context
+
 
     fun start(){
         if (File(DB_PATH+DB_NAME).exists()) {
