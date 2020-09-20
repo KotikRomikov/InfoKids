@@ -32,7 +32,8 @@ class MainRazdelActivity : AppCompatActivity() {
         tvMed.setOnClickListener {
             mainRazdel = "MED"
 
-            val cursor = db.rawQuery("SELECT * FROM part WHERE city='$city';", null)
+            val cursor =
+                db.rawQuery("SELECT * FROM info WHERE city='$city' AND part='$mainRazdel';", null)
             cursor.moveToFirst()
             while (!cursor.isAfterLast) {
                 name = cursor.getString(cursor.getColumnIndex("name"))

@@ -25,7 +25,7 @@ class TargetSQL(context: Context) {
 
 
         val cursor = MainActivity.db.rawQuery(
-            "SELECT * FROM info WHERE city='$city' AND part='$namePartText';",
+            "SELECT * FROM info WHERE city='$city' AND partname='$namePartText';",
             null
         ) // запрашиваем данные из таблицы через SQL запрос, должен быть динамический!
         cursor.moveToFirst() //перемещаем курсор (таблицу) с результатами в начало
