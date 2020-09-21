@@ -33,10 +33,13 @@ class MainRazdelActivity : AppCompatActivity() {
             mainRazdel = "MED"
 
             val cursor =
-                db.rawQuery("SELECT * FROM info WHERE city='$city' AND part='$mainRazdel';", null)
+                db.rawQuery(
+                    "SELECT DISTINCT * FROM info WHERE city='$city' AND part='$mainRazdel';",
+                    null
+                )
             cursor.moveToFirst()
             while (!cursor.isAfterLast) {
-                name = cursor.getString(cursor.getColumnIndex("name"))
+                name = cursor.getString(cursor.getColumnIndex("partname"))
                 Log.d("test", "заполняем массив name = $name")
                 listP.add(
                     PartItem(name)
