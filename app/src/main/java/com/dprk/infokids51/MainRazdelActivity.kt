@@ -34,7 +34,7 @@ class MainRazdelActivity : AppCompatActivity() {
 
             val cursor =
                 db.rawQuery(
-                    "SELECT DISTINCT * FROM info WHERE city='$city' AND part='$mainRazdel';",
+                    "SELECT DISTINCT partname FROM info WHERE city='$city' AND part='$mainRazdel';",
                     null
                 )
             cursor.moveToFirst()
