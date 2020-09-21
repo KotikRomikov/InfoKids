@@ -11,29 +11,6 @@
         android:theme="@style/AppTheme">
         <activity android:name=".TestActivity" />
         <activity android:name=".PartActivity" />
-        <activity android:name=".apatiti.shop.ApatitiShopHandMadeActivity" />
-        <activity android:name=".apatiti.shop.ApatitiShopToysActivity" />
-        <activity android:name=".apatiti.shop.ApatitiShopShoesActivity" />
-        <activity android:name=".apatiti.shop.ApatitiShopClothesActivity" />
-        <activity android:name=".apatiti.shop.ApatitiShopProductForKidsActivity" />
-        <activity android:name=".apatiti.ApatitiShopActivity" />
-        <activity android:name=".apatiti.relaxation.ApatitiRelaxationKidsOrganizationActivity" />
-        <activity android:name=".apatiti.relaxation.ApatitiRelaxationCafeActivity" />
-        <activity android:name=".apatiti.relaxation.ApatitiRelaxationSportActivity" />
-        <activity android:name=".apatiti.relaxation.ApatitiRelaxationGameCentreActivity" />
-        <activity android:name=".apatiti.ApatitiRelaxationActivity" />
-        <activity android:name=".apatiti.medical.ApatitiMedicalHospitalActivity" />
-        <activity android:name=".apatiti.medical.ApatitiMedicalPrivateHospitalActivity" />
-        <activity android:name=".apatiti.medical.ApatitiMedicalSanativeActivity" />
-        <activity android:name=".apatiti.medical.ApatitiMedicalPsihologiActivity" />
-        <activity android:name=".apatiti.medical.ApatitiMedicalLogopedActivity" />
-        <activity android:name=".apatiti.medical.ApatitiMedicalMassageActivity" />
-        <activity android:name=".apatiti.medical.ApatitiMedicalDoctorActivity" />
-        <activity android:name=".apatiti.ApatitiMedicalActivity" />
-        <activity android:name=".apatiti.ApatitiFotoVideoActivity" />
-        <activity android:name=".apatiti.other.ApatitiOtherNanniesActivity" />
-        <activity android:name=".apatiti.other.ApatitiOtherHireActivity" />
-        <activity android:name=".apatiti.ApatitiOtherActivity" />
         <activity android:name=".kirovsk.KirovskOtherActivity" />
         <activity android:name=".kirovsk.KirovskFotoVideoActivity" />
         <activity android:name=".kirovsk.celebration.KirovskCelebrationOtherActivity" />
@@ -196,7 +173,6 @@
         <activity android:name=".olenegorsk.OlenegorskSectionActivity" />
         <activity android:name=".monchegorsk.MonchegorskSectionActivity" />
         <activity android:name=".kirovsk.KirovskSectionActivity" />
-        <activity android:name=".apatiti.ApatitiSectionActivity" />
         <activity android:name=".murmansk.MurmanskMedicalActivity" />
         <activity android:name=".MainRazdelActivity" />
         <activity android:name=".MainActivity">
@@ -209,21 +185,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".MenuActivity" />
-        <activity android:name=".apatiti.ApatitiCelebrationActivity" />
-        <activity android:name=".apatiti.celebration.ApatitiCelebrationCakesActivity" />
-        <activity android:name=".apatiti.celebration.ApatitiCelebrationBallsActivity" />
-        <activity android:name=".apatiti.celebration.ApatitiCelebrationAnimatorActivity" />
-        <activity android:name=".apatiti.celebration.ApatitiCelebrationOtherActivity" />
-        <activity android:name=".apatiti.hobby.ApatitiHobbyCiprActivity" />
-        <activity android:name=".apatiti.ApatitiHobbyActivity" />
-        <activity android:name=".apatiti.hobby.ApatitiHobbyDevelopmentCentreActivity" />
-        <activity android:name=".apatiti.hobby.ApatitiHobbyTutorsActivity" />
-        <activity android:name=".apatiti.hobby.ApatitiHobbySportsSectionActivity" />
-        <activity android:name=".apatiti.hobby.ApatitiHobbyDecorativeAppliedActivity" />
-        <activity android:name=".apatiti.hobby.ApatitiHobbyTechActivity" />
-        <activity android:name=".apatiti.hobby.ApatitiHobbyChoreographyActivity" />
-        <activity android:name=".apatiti.hobby.ApatitiHobbyArtWorkActivity" />
-        <activity android:name=".apatiti.hobby.ApatitiHobbyLanguagesActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
