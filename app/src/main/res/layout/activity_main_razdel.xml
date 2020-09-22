@@ -95,7 +95,7 @@
                 android:layout_margin="4dp"
                 android:background="@drawable/selected"
                 android:fontFamily="@font/roboto_condensed_regular"
-                android:text="Фото-,видеооператоры "
+                android:text="Фото, видеооператоры "
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
