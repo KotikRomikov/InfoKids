@@ -14,15 +14,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-
         <LinearLayout
             android:id="@+id/liner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginTop="8dp">
-
             <TextView
                 android:id="@+id/tvMRM"
                 android:layout_width="match_parent"
@@ -35,7 +32,6 @@
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
                 android:textSize="24sp" />
-
             <TextView
                 android:id="@+id/tvSVR"
                 android:layout_width="match_parent"
@@ -48,7 +44,6 @@
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
                 android:textSize="24sp" />
-
             <TextView
                 android:id="@+id/tvLNG"
                 android:layout_width="match_parent"
@@ -61,7 +56,6 @@
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
                 android:textSize="24sp" />
-
             <TextView
                 android:id="@+id/tvMNC"
                 android:layout_width="match_parent"
@@ -74,7 +68,6 @@
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
                 android:textSize="24sp" />
-
             <TextView
                 android:id="@+id/tvKRV"
                 android:layout_width="match_parent"
@@ -100,7 +93,6 @@
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
                 android:textSize="24sp" />
-
             <TextView
                 android:id="@+id/tvPLR"
                 android:layout_width="match_parent"
@@ -113,7 +105,6 @@
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
                 android:textSize="24sp" />
-
             <TextView
                 android:id="@+id/tvKND"
                 android:layout_width="match_parent"
@@ -126,8 +117,6 @@
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
                 android:textSize="24sp" />
-
         </LinearLayout>
-
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
