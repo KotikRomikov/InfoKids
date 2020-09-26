@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.dprk.infokids51.MainActivity.Companion.city
-import com.dprk.infokids51.MainActivity.Companion.db
+import com.dprk.infokids51.MainActivity.Companion.database
 import kotlinx.android.synthetic.main.activity_main_razdel.*
 
 class MainRazdelActivity : AppCompatActivity() {
@@ -33,7 +33,7 @@ class MainRazdelActivity : AppCompatActivity() {
             mainRazdel = "MED"
 
             val cursor =
-                db.rawQuery(
+                database.rawQuery(
                     "SELECT DISTINCT partname FROM info WHERE city='$city' AND part='$mainRazdel';",
                     null
                 )

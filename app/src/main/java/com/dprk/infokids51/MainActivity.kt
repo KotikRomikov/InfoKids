@@ -5,38 +5,28 @@ import android.content.pm.ActivityInfo
 import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
+import kotlin.system.exitProcess
 
 
 class MainActivity : AppCompatActivity() {
 
     companion object {
-        lateinit var db: SQLiteDatabase
+        lateinit var db: DatabaseHelper
         lateinit var city: String
+        lateinit var database : SQLiteDatabase
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //Запускаем обновление БД если это необходимо
-        try {
-            DatabaseHelper(this).start()
-        } catch (mIOException: IOException) {
-            throw Error("UnableToUpdateDatabase")
-        }
-
-        //подключаемся к БД в жежиме чтения
-        try {
-            db = SQLiteDatabase.openDatabase(
-                this.filesDir.path + "/info.db",
-                null,
-                SQLiteDatabase.OPEN_READONLY
-            )
-        } catch (mSQLException: SQLException) {
-            throw mSQLException
-        }
+        db = DatabaseHelper(this)
+        Log.d("1", this.getDatabasePath("info.db").absolutePath)
+        db.updateDatabase()
+        database = db.readableDatabase
 
         requestedOrientation = (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         setContentView(R.layout.activity_main)
@@ -75,6 +65,10 @@ class MainActivity : AppCompatActivity() {
             city = "KND"
             startActivity(menuIntent)
         }
+    }
+
+    override fun onBackPressed() {
+        database.close()
     }
 
 

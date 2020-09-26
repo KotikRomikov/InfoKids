@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.core.content.ContextCompat.startActivity
 import com.dprk.infokids51.AdapterPart.Companion.namePartText
 import com.dprk.infokids51.MainActivity.Companion.city
+import com.dprk.infokids51.MainActivity.Companion.database
 
 class TargetSQL(context: Context) {
 
@@ -24,7 +25,7 @@ class TargetSQL(context: Context) {
         var info: String
 
 
-        val cursor = MainActivity.db.rawQuery(
+        val cursor = database.rawQuery(
             "SELECT * FROM info WHERE city='$city' AND partname='$namePartText';",
             null
         ) // запрашиваем данные из таблицы через SQL запрос, должен быть динамический!

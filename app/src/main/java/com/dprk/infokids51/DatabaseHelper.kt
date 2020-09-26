@@ -1,39 +1,30 @@
 package com.dprk.infokids51
 
+import android.annotation.SuppressLint
 import android.content.Context
-import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
 import java.io.*
 
-
-class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, null, DB_VERSION){
+class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
 
     companion object {
         const val DB_NAME = "info.db"
-        const val DB_VERSION = 12
+        const val DB_VERSION = 1
     }
 
-    private val DB_PATH = context.filesDir.path + "/"
-    private var mDataBase: SQLiteDatabase? = null
     private var mContext = context
+    private var OLD_VERSION: Int = 0
 
+    @SuppressLint("SdCardPath")
+    private val DB_PATH = "/data/user/0/com.dprk.infokids51/databases/"
 
-    fun start(){
-        if (File(DB_PATH+DB_NAME).exists()) {
-            Log.d("TEST", "File ${DB_PATH+DB_NAME} EXISTS")
-
-        }
-        else{
-            Log.d("TEST", "File ${DB_PATH+DB_NAME} NOT EXISTS")
-            //this.readableDatabase
-            this.close()
-            try {
-                copyDBFile()
-            } catch (mIOException: IOException) {
-                throw Error("ErrorCopyingDataBase")
-            }
+    fun updateDatabase(){
+        if (OLD_VERSION != DB_VERSION) {
+            File(DB_PATH+ DB_NAME).delete()
+            Log.d("TEST", "OLD_VERSION=$OLD_VERSION NEW_VERSION=$DB_VERSION")
+            copyDBFile()
         }
     }
 
@@ -55,41 +46,15 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper (context, DB_NAME, nul
         Log.d("COPY FILE BASE", "FINISH")
     }
 
-    //Обязательная функция
-    override fun onCreate(db: SQLiteDatabase?) {    }
+    override fun onCreate(db: SQLiteDatabase?) {}
 
-    //Обновление БД при первом запуске приложения и переустановки обновленной
-    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, DB_VERSION : Int) {
-        Log.d("onUpgrade DB", "START")
-        if (oldVersion < DB_VERSION) {
-            val dbFile = File(DB_PATH + DB_NAME)
-            if (dbFile.exists()) {
-                //dbFile.delete()
-                //Log.d("UPDATE DB", "DELETE OLD DB")
-                try {
-                    copyDBFile()
-                } catch (mIOException: IOException) {
-                    throw Error("ErrorCopyingDataBase")
-                }
-            }
-        }
+    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+        Log.d("DB UPGRADE", "START")
+        OLD_VERSION = oldVersion
     }
 
-    //Синхронизация сделана по рекомендациям, на сколько обязательна не знаю
-    @Synchronized
-    override fun close() {
-        if (mDataBase != null) mDataBase!!.close()
-        super.close()
+    override fun onDowngrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+        OLD_VERSION = oldVersion
+        Log.d("DB DOWNGRADE", "START")
     }
-
-
-    //тестовое открытие БД
-    @Throws(SQLException::class)
-    fun openDataBase(): Boolean {
-    Log.d("OPEN BASE", "START")
-    mDataBase =
-    SQLiteDatabase.openDatabase(DB_PATH + DB_NAME, null, SQLiteDatabase.OPEN_READWRITE)
-    return mDataBase != null
-    }
-
 }
