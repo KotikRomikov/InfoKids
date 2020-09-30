@@ -26,7 +26,7 @@ class AdapterPart(listArray: ArrayList<PartItem>, context: Context) :
 
             itemView.setOnClickListener() {
                 namePartText = namePart.text.toString()
-                TargetSQL(context).TargetSQL(context)
+                TargetSQL().TargetSQL(context)
             }
         }
     }

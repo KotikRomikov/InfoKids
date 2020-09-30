@@ -54,8 +54,8 @@ class MainRazdelActivity : AppCompatActivity() {
         }
         tvFotoVideo.setOnClickListener {
             mainRazdel = "FTV"
-            SQL_Main_Part()
-            startActivity(RecActivity)
+            val sql = "SELECT * FROM info WHERE city='$city' AND part='$mainRazdel';"
+            TargetSQL().TargetSQL(this, sql)
         }
         tvGarden.setOnClickListener {
             mainRazdel = "GRD"

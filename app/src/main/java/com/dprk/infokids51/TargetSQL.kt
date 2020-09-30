@@ -8,12 +8,12 @@ import com.dprk.infokids51.AdapterPart.Companion.namePartText
 import com.dprk.infokids51.MainActivity.Companion.city
 import com.dprk.infokids51.MainActivity.Companion.database
 
-class TargetSQL(context: Context) {
+class TargetSQL() {
 
-    val contextX = context
+    //val contextX = context
 
 
-    fun TargetSQL(context: Context) {
+    fun TargetSQL(context: Context, sql: String = "SELECT * FROM info WHERE city='$city' AND partname='$namePartText';") {
         //тут должна быть переменная что-то вроде city:String = "KND", для динамического SQL запроса
         //тут должен быть объявлен массив для ресайкла val list = ArrayList<ListItem>()
 
@@ -26,7 +26,7 @@ class TargetSQL(context: Context) {
 
 
         val cursor = database.rawQuery(
-            "SELECT * FROM info WHERE city='$city' AND partname='$namePartText';",
+            sql,
             null
         ) // запрашиваем данные из таблицы через SQL запрос, должен быть динамический!
         cursor.moveToFirst() //перемещаем курсор (таблицу) с результатами в начало
@@ -49,7 +49,7 @@ class TargetSQL(context: Context) {
             Log.d("CURSOR", "EMAIL = $email")
         }
         cursor.close()//обязательно закрываем курсор
-        val x = Intent(contextX, TestActivity::class.java)
+        val x = Intent(context, TestActivity::class.java)
         startActivity(context, x, null)
 
     }
