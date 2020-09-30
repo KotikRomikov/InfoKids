@@ -7,7 +7,6 @@
     tools:context=".MenuActivity">
 
     <ScrollView
-        android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,7 +16,6 @@
 
 
         <LinearLayout
-            android:id="@+id/liner"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
