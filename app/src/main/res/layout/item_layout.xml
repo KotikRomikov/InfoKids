@@ -30,7 +30,7 @@
             android:text="INFO KIDS"
             android:textAlignment="viewEnd"
             android:textAllCaps="true"
-            android:textSize="30sp"
+            android:textSize="24sp"
             android:typeface="normal" />
 
         <TextView
