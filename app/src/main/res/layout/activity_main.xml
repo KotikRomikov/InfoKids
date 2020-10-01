@@ -13,11 +13,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/tvMRM"
                 android:layout_width="match_parent"
@@ -30,6 +32,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
                 android:textSize="24sp" />
+
             <TextView
                 android:id="@+id/tvSVR"
                 android:layout_width="match_parent"
@@ -42,6 +45,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
                 android:textSize="24sp" />
+
             <TextView
                 android:id="@+id/tvLNG"
                 android:layout_width="match_parent"
@@ -54,6 +58,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
                 android:textSize="24sp" />
+
             <TextView
                 android:id="@+id/tvMNC"
                 android:layout_width="match_parent"
@@ -66,6 +71,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
                 android:textSize="24sp" />
+
             <TextView
                 android:id="@+id/tvKRV"
                 android:layout_width="match_parent"
@@ -91,6 +97,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
                 android:textSize="24sp" />
+
             <TextView
                 android:id="@+id/tvPLR"
                 android:layout_width="match_parent"
@@ -103,6 +110,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
                 android:textSize="24sp" />
+
             <TextView
                 android:id="@+id/tvKND"
                 android:layout_width="match_parent"
@@ -115,6 +123,18 @@
                 android:textAllCaps="false"
                 android:textColor="@color/testTextColor"
                 android:textSize="24sp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floating_action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="16dp"
+                android:backgroundTint="#98C3FE"
+                android:contentDescription="ADD"
+                app:rippleColor="#FFFFFF"
+                app:srcCompat="@android:drawable/ic_input_add" />
         </LinearLayout>
+
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

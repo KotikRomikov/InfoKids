@@ -66,14 +66,18 @@ class MainActivity : AppCompatActivity() {
             city = "KND"
             startActivity(menuIntent)
         }
+
+        floating_action_button.setOnClickListener{
+
+        }
     }
 
     // Обработка двойного нажатия кнопки "BACK" для выхода из приложения
     private var backPress: Long = 0
 
     override fun onBackPressed() {
-        database.close()
         if (backPress + 2000 > System.currentTimeMillis()) {
+            database.close()
             super.onBackPressed()
         } else {
             backPress = System.currentTimeMillis()
