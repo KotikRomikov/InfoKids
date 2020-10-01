@@ -6,6 +6,7 @@ import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
@@ -67,9 +68,20 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // Обработка двойного нажатия кнопки "BACK" для выхода из приложения
+    private var backPress: Long = 0
+
     override fun onBackPressed() {
         database.close()
+        if (backPress + 2000 > System.currentTimeMillis()) {
+            super.onBackPressed()
+        } else {
+            backPress = System.currentTimeMillis()
+            Toast.makeText(
+                baseContext,
+                " Для выхода нажмите кнопку Назад еще раз",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
     }
-
-
 }
