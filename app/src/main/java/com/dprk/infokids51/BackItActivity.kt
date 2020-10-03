@@ -15,20 +15,29 @@ class BackItActivity : AppCompatActivity() {
         setContentView(R.layout.activity_back_it)
 
         var inputCity = ""
-        var inputPart = ""
+        var inputAdres = ""
+        var inputEmail = ""
 
-        outlinedTextFieldCity.editText?.doOnTextChanged(){ inputText, _, _, _ ->
+        outlinedTextFieldCity.editText?.doOnTextChanged() { inputText, _, _, _ ->
             inputCity = inputText.toString()
             Log.d("INPUT TAG", "inputCity=${inputCity}")
-            if (inputCity == "SSS") sendEmail(inputCity)
-            if (inputCity == "DDD") call()
         }
 
+        outlinedTextFieldAdres.editText?.doOnTextChanged() { inputText, _, _, _ ->
+            inputAdres = inputText.toString()
+            Log.d("INPUT TAG", "inputCity=${inputAdres}")
+        }
+
+        outlinedTextFieldEmail.editText?.doOnTextChanged(){inputText, _, _, _ ->
+            inputEmail = inputText.toString()
+            Log.d("INPUT TAG", "inputCity=${inputEmail}")
+
+        }
     }
 
-    fun sendEmail(textEmail:String) {
+    fun sendEmail(textEmail: String) {
 
-        val sendEmail : Intent = Intent(Intent.ACTION_SEND).apply {
+        val sendEmail: Intent = Intent(Intent.ACTION_SEND).apply {
             // The intent does not have a URI, so declare the "text/plain" MIME type
             putExtra(Intent.EXTRA_EMAIL, arrayOf("20dprk20@gmail.com")) // recipients
             putExtra(Intent.EXTRA_SUBJECT, "Добавить, редактировать")
@@ -40,15 +49,5 @@ class BackItActivity : AppCompatActivity() {
         sendEmail.type = "text/plain"
 
         startActivity(sendEmail)
-
-    }
-
-    fun call (){
-        val callIntent: Intent = Uri.parse("tel:5551234").let { number ->
-            Intent(Intent.ACTION_DIAL, number)
-        }
-
-        startActivity(callIntent)
-
     }
 }

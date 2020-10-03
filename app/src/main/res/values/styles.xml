@@ -5,10 +5,8 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorButtonNormal">#B99CED</item> \\ цвет кнопок
         <item name="android:textColorLink">@color/colorPrimary</item> \\ цвет ссылок
         <item name="android:textColorSecondary">#000000</item> \\ цвет текста
-        <item name="android:textSize">16sp</item> \\ размер текста на кнопках
     </style>
 
     <style name="testStyle" parent="Theme.MaterialComponents.Light.NoActionBar">
