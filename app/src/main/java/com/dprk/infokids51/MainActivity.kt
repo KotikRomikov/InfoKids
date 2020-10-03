@@ -2,15 +2,13 @@ package com.dprk.infokids51
 
 import android.content.Intent
 import android.content.pm.ActivityInfo
-import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
+import android.provider.ContactsContract
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import java.io.IOException
-import kotlin.system.exitProcess
 
 
 class MainActivity : AppCompatActivity() {
@@ -68,7 +66,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         floating_action_button.setOnClickListener{
-
+            val backIt = Intent(this, BackItActivity::class.java)
+            startActivity(backIt)
         }
     }
 
