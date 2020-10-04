@@ -2,20 +2,19 @@ package com.dprk.infokids51
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
 import kotlinx.android.synthetic.main.activity_back_it.*
-import org.w3c.dom.Text
 
 class BackItActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_back_it)
 
-        var textEmail = ""
+        var textEmail: String
         var inputName = ""
         var inputCity = ""
         var inputAdres = ""
