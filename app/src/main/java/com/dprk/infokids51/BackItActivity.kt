@@ -5,6 +5,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.core.widget.doOnTextChanged
 import kotlinx.android.synthetic.main.activity_back_it.*
 import org.w3c.dom.Text
@@ -14,24 +15,78 @@ class BackItActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_back_it)
 
+        var textEmail = ""
+        var inputName = ""
         var inputCity = ""
         var inputAdres = ""
         var inputEmail = ""
+        var inputWeb = ""
+        var inputCallNumber =""
+        var inputInfo = ""
+        var errorSendEmail = false
 
-        outlinedTextFieldCity.editText?.doOnTextChanged() { inputText, _, _, _ ->
+        outlinedTextFieldName.editText?.doOnTextChanged { inputText, _, _, _ ->
+            inputName = inputText.toString()
+            val counter = inputText?.length
+            Log.d("INPUT TAG", "inputName=${inputName} count=$counter")
+            if (counter != null) {
+                if (counter > outlinedTextFieldName.counterMaxLength) {
+                    outlinedTextFieldName.error = "Превышена допустимая длина текста"
+                    errorSendEmail = true
+                } else {
+                    outlinedTextFieldName.error = null
+                    errorSendEmail = false
+                }
+            }
+        }
+
+        outlinedTextFieldCity.editText?.doOnTextChanged { inputText, _, _, _ ->
             inputCity = inputText.toString()
             Log.d("INPUT TAG", "inputCity=${inputCity}")
         }
 
-        outlinedTextFieldAdres.editText?.doOnTextChanged() { inputText, _, _, _ ->
+        outlinedTextFieldAdres.editText?.doOnTextChanged { inputText, _, _, _ ->
             inputAdres = inputText.toString()
             Log.d("INPUT TAG", "inputCity=${inputAdres}")
         }
 
-        outlinedTextFieldEmail.editText?.doOnTextChanged(){inputText, _, _, _ ->
+        outlinedTextFieldEmail.editText?.doOnTextChanged { inputText, _, _, _ ->
             inputEmail = inputText.toString()
-            Log.d("INPUT TAG", "inputCity=${inputEmail}")
+            Log.d("INPUT TAG", "inputEmail=${inputEmail}")
+        }
 
+        outlinedTextFieldWeb.editText?.doOnTextChanged { inputText, _, _, _ ->
+            inputWeb = inputText.toString()
+            Log.d("INPUT TAG", "inputWeb=${inputWeb}")
+        }
+
+        outlinedTextFieldCallNumber.editText?.doOnTextChanged { inputText, _, _, _ ->
+            inputCallNumber = inputText.toString()
+            Log.d("INPUT TAG", "inputCallNumber=${inputCallNumber}")
+        }
+
+        outlinedTextFieldInfo.editText?.doOnTextChanged { inputText, _, _, _ ->
+            inputInfo = inputText.toString()
+            val counter = inputText?.length
+            Log.d("INPUT TAG", "inputCity=${inputInfo} count=$counter")
+            if (counter != null) {
+                if (counter > outlinedTextFieldInfo.counterMaxLength) {
+                    outlinedTextFieldInfo.error = "Превышена допустимая длина текста"
+                    errorSendEmail = true
+                } else {
+                    outlinedTextFieldInfo.error = null
+                    errorSendEmail = false
+                }
+            }
+        }
+
+        sendButton.setOnClickListener(){
+            textEmail = "Name: $inputName\nCity: $inputCity\nAdres: $inputAdres\nEmail: $inputEmail\nWeb: $inputWeb\nCallNumber: $inputCallNumber\nInfo: $inputInfo"
+            if (!errorSendEmail) {
+                sendEmail(textEmail)
+            } else{
+                Toast.makeText(this, "Ошибка в заполнении формы", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -39,6 +94,7 @@ class BackItActivity : AppCompatActivity() {
 
         val sendEmail: Intent = Intent(Intent.ACTION_SEND).apply {
             // The intent does not have a URI, so declare the "text/plain" MIME type
+            type = "text/plan"
             putExtra(Intent.EXTRA_EMAIL, arrayOf("20dprk20@gmail.com")) // recipients
             putExtra(Intent.EXTRA_SUBJECT, "Добавить, редактировать")
             putExtra(Intent.EXTRA_TEXT, textEmail)
@@ -46,7 +102,6 @@ class BackItActivity : AppCompatActivity() {
         }
 
         sendEmail.data = Uri.parse("mailto:")
-        sendEmail.type = "text/plain"
 
         startActivity(sendEmail)
     }
