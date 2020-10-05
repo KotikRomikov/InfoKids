@@ -17,7 +17,7 @@
             android:id="@+id/Part"
             android:layout_width="match_parent"
             android:layout_height="36dp"
-            android:layout_margin="4dp"
+            android:layout_margin="2dp"
             android:background="@drawable/selected"
             android:fontFamily="@font/roboto_condensed_regular"
             android:text="Name Part"

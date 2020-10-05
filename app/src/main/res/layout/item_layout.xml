@@ -14,6 +14,23 @@
         android:theme="@style/testStyle">
 
         <TextView
+            android:id="@+id/webCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/locationCompany"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="false"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:autoLink="web"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:text="https://vk.com"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+        <TextView
             android:id="@+id/nameCompany"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,23 +66,6 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/webCompany"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/locationCompany"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="false"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="4dp"
-            android:autoLink="web"
-            android:fontFamily="@font/roboto_condensed_regular"
-            android:text="https://vk.com"
-            android:textAlignment="viewStart"
-            android:textAllCaps="false"
-            android:textSize="16sp" />
-
-        <TextView
             android:id="@+id/telCompany"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -84,9 +84,9 @@
         <TextView
             android:id="@+id/emailCompany"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="16dp"
             android:layout_above="@+id/telCompany"
-            android:layout_alignParentStart="true"
+            android:layout_alignParentStart="false"
             android:layout_alignParentEnd="false"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
