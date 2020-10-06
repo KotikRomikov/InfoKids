@@ -88,3 +88,22 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+/*
+<TextView
+            android:id="@+id/emailCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_above="@+id/telCompany"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentEnd="false"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:autoLink="email"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:includeFontPadding="false"
+            android:text="infokids@mail.ru"
+            android:textColor="@color/testTextColor"
+            android:textSize="16sp" />
+ */

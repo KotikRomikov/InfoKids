@@ -17,13 +17,13 @@ class MyAdapter(listArray: ArrayList<ListItem>, context: Context) :
 
         val locateCompany = view.findViewById<TextView>(R.id.locationCompany)
         val nameCompany = view.findViewById<TextView>(R.id.nameCompany)
-        val emailCompany = view.findViewById<TextView>(R.id.emailCompany)
+        //val emailCompany = view.findViewById<TextView>(R.id.emailCompany)
         val telNumber = view.findViewById<TextView>(R.id.telCompany)
         val webLink = view.findViewById<TextView>(R.id.webCompany)
 
         fun bind(listItem: ListItem, context: Context) {
             nameCompany.text = listItem.nameCompany
-            emailCompany.text = listItem.emailCompany
+            //emailCompany.text = listItem.emailCompany
             telNumber.text = listItem.telCompany
             webLink.text = listItem.webCompany
             locateCompany.text = listItem.locateCompany

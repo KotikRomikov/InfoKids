@@ -18,7 +18,7 @@ class TargetSQL() {
         //тут должен быть объявлен массив для ресайкла val list = ArrayList<ListItem>()
 
         var name: String
-        var email: String
+        //var email: String
         var tel: String
         var web: String
         var locate: String
@@ -32,21 +32,22 @@ class TargetSQL() {
         cursor.moveToFirst() //перемещаем курсор (таблицу) с результатами в начало
         while (!cursor.isAfterLast) {
             name = cursor.getString(cursor.getColumnIndex("name"))
-            email = cursor.getString(cursor.getColumnIndex("email"))
+            //email = cursor.getString(cursor.getColumnIndex("email"))
             tel = cursor.getString(cursor.getColumnIndex("tel"))
             web = cursor.getString(cursor.getColumnIndex("web"))
             locate = cursor.getString(cursor.getColumnIndex("locate"))
             info = cursor.getString(cursor.getColumnIndex("info"))
 
             MainRazdelActivity.list.add(
-                ListItem(name, email, tel, web, locate, info)
+                //ListItem(name, email, tel, web, locate, info)
+                        ListItem(name, tel, web, locate, info)
             )
 
             cursor.moveToNext()//переходим на следующую строку в таблице
             //пишем в лог консоли, что получили на каждой строке
             Log.d("CURSOR", "TEL = $tel")
             Log.d("CURSOR", "NAME = $name")
-            Log.d("CURSOR", "EMAIL = $email")
+            //Log.d("CURSOR", "EMAIL = $email")
         }
         cursor.close()//обязательно закрываем курсор
         val x = Intent(context, TestActivity::class.java)

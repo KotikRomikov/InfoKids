@@ -7,7 +7,9 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_back_it.*
+import java.io.IOException
 
 class BackItActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +22,7 @@ class BackItActivity : AppCompatActivity() {
         var inputAdres = ""
         var inputEmail = ""
         var inputWeb = ""
-        var inputCallNumber =""
+        var inputCallNumber = ""
         var inputInfo = ""
         var errorSendEmail = false
 
@@ -79,11 +81,24 @@ class BackItActivity : AppCompatActivity() {
             }
         }
 
-        sendButton.setOnClickListener(){
-            textEmail = "Name: $inputName\nCity: $inputCity\nAdres: $inputAdres\nEmail: $inputEmail\nWeb: $inputWeb\nCallNumber: $inputCallNumber\nInfo: $inputInfo"
+        sendButton.setOnClickListener() {
+            textEmail =
+                "Name: $inputName\nCity: $inputCity\nAdres: $inputAdres\nEmail: $inputEmail\nWeb: $inputWeb\nCallNumber: $inputCallNumber\nInfo: $inputInfo"
             if (!errorSendEmail) {
-                sendEmail(textEmail)
-            } else{
+                MaterialAlertDialogBuilder(this)
+                    .setTitle("Отправка запроса")
+                    .setMessage("Для отправки данных, на устройстве должен присутствовать почтовый клиент")
+                    .setPositiveButton("OK") { _, _ ->
+                        try {
+                            sendEmail(textEmail)
+                        } catch (e: IOException) {
+                            finish()
+                        }
+                    }
+                    .setNegativeButton("Отмена") { _, _ ->
+                    }
+                    .show()
+            } else {
                 Toast.makeText(this, "Ошибка в заполнении формы", Toast.LENGTH_SHORT).show()
             }
         }
@@ -100,7 +115,7 @@ class BackItActivity : AppCompatActivity() {
             // You can also attach multiple items by passing an ArrayList of Uris
         }
 
-        sendEmail.data = Uri.parse("mailto:")
+        //sendEmail.data = Uri.parse("mailto:")
 
         startActivity(sendEmail)
     }
