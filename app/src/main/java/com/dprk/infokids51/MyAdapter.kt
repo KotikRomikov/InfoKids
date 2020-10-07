@@ -17,6 +17,7 @@ class MyAdapter(listArray: ArrayList<ListItem>, context: Context) :
 
         val locateCompany = view.findViewById<TextView>(R.id.locationCompany)
         val nameCompany = view.findViewById<TextView>(R.id.nameCompany)
+
         //val emailCompany = view.findViewById<TextView>(R.id.emailCompany)
         val telNumber = view.findViewById<TextView>(R.id.telCompany)
         val webLink = view.findViewById<TextView>(R.id.webCompany)
@@ -30,10 +31,15 @@ class MyAdapter(listArray: ArrayList<ListItem>, context: Context) :
 
             itemView.setOnClickListener() {
                 //Toast.makeText(context, "Pressed: ${listItem.infoCompany}", Toast.LENGTH_SHORT).show()
-                MaterialAlertDialogBuilder(context)
+                val infoDialog = MaterialAlertDialogBuilder(context)
                     .setTitle(nameCompany.text)
-                    .setMessage(listItem.infoCompany)
-                    .show()
+                if (listItem.infoCompany != "") {
+                    infoDialog.setMessage(listItem.infoCompany)
+                    infoDialog.show()
+                } else {
+                    infoDialog.setMessage("Дополнительная информация отсутствует.")
+                    infoDialog.show()
+                }
             }
         }
     }
